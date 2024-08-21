@@ -1,0 +1,2 @@
+# LinuxPalvelimet
+Linux course homework
