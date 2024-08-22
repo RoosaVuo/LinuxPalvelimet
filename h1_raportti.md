@@ -1,5 +1,7 @@
-#Raportin kirjoittaminen
+# Raportin kirjoittaminen
 
-#FSF Free Software Definition
+Hyvän raportin 4 tunnusmerkkiä: toistettavuus, täsmällisyys, helppolukuisuus ja lähteisiin viittaaminen. Lähde Karvinen, Tero 2006: Raportin kirjoittaminen. https://terokarvinen.com/2006/raportin-kirjoittaminen-4/ 
 
-#Linuxin asennus
+# FSF Free Software Definition
+
+# Linuxin asennus
