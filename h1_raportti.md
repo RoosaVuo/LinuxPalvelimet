@@ -17,7 +17,7 @@ Lähde: Free Software Foundation, Inc. 2024: What is Free Software. https://www.
 Lähtötiedot: Koneeni on Lenovon 82R4 kannettava. OS Windows 11 Home 64. VirtualBox asennettuna jo koneelle.
 Tein harjoituksen kotona perjantaina 23.8.2024
 ## Lataaminen
-17.45 Aloitin lataamisen [linkin kautta](https://terokarvinen.com/2021/install-debian-on-virtualbox/) sivuston kautta klikkaamalla linkkiä debian-live-12.6.0-amd64-xfce.iso . Tuplaklikkasin ladattua tiedostoa ja sen jälkeen kilkkasin "Avaa" ponnahdusikkunassa.
+17.45 Aloitin lataamisen [sivuston kautta](https://terokarvinen.com/2021/install-debian-on-virtualbox/) klikkaamalla linkkiä debian-live-12.6.0-amd64-xfce.iso . Tuplaklikkasin ladattua tiedostoa ja sen jälkeen kilkkasin "Avaa" ponnahdusikkunassa.
 
 ## Uuden virtuaalikoneen luominen
 17.48 siirryin VirtualBoxiin. Klikkasin "New" painiketta ja uudessa ikkunassa "Expert Mode" painiketta. Lisäsin seuraavat tiedot: 
