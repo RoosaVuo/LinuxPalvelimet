@@ -14,3 +14,5 @@ Lähde: Free Software Foundation, Inc. 2024: What is Free Software. https://www.
 
 
 # Linuxin asennus
+Lähtötiedot: Koneeni on Lenovon 82R4 kannettava. OS Windows 11 Home 64. VirtualBox asennettuna jo koneelle.
+Tein harjoituksen kotona perjantaina 23.8.2024
