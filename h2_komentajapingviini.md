@@ -1,4 +1,4 @@
-# x) Tiivistelmä Command Line Basics Revisited
+cd ..# x) Tiivistelmä Command Line Basics Revisited
 Komentoriviohjelmassa liikutaan ja syötetään komentoja hakemistoissa (directory). Alla esimerkkejä komennoista eri tarkoituksiin:
 - liikkuminen ja lukeminen: pwd, ls, cd, less, |
 - tiedostojen muokkaaminen: mkdir, mv, cp, remdir, rm, rm -r
@@ -62,10 +62,20 @@ Esimerkki alternatives log:
 
 
 # d) The Friendly M. Näytä 2-3 kuvaavaa esimerkkiä grep-komennon käytöstä. Ohjeita löytyy 'man grep' ja tietysti verkosta.
+![image](https://github.com/user-attachments/assets/3ccac8f0-4ee6-4696-8b86-d63e9fd705f1)
+testissä komennot   
+grep -i "sana" tiedoston nimi = etsii kaikki vastaavuudet tiedostosta, ei huomioi pieniä ja suuria kirjaimia
+grep -c "sana" tiedoston nimi = laskee montako kertaa sana esiintyy
+grep -l "sana" * = näyttää missä tiedostoissa sana löytyy
 
 
 # e) Pipe. Näytä esimerkki putkista (pipes, "|").
+Kokeilin komentoa ls /etc|less
+![image](https://github.com/user-attachments/assets/6bf45d68-87f1-4a70-9e96-c478fb0f2caf)
 
+![image](https://github.com/user-attachments/assets/de067952-e8e6-4b32-8030-01f7561e1dc9)
+
+Välilyönnillä pääsee eteenpäin ja b:llä taaksepäin. En löytänyt oikein muita kansioita, joissa olisi ollut paljon sisältä putkituksen testaamiseksi.
 
 # f) Rauta. Listaa testaamasi koneen rauta (‘sudo lshw -short -sanitize’). Asenna lshw tarvittaessa. Selitä ja analysoi listaus.
 
