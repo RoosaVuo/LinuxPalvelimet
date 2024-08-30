@@ -28,7 +28,37 @@ Tämän jälkeen oli pitkä lista unpacking/selecting/setting up -rivejä. En er
 
 
 
-# c) FHS. Esittele kansiot, jotka on listattu "Command Line Basics Revisited" kappaleessa "Important directories". Näytä kuvaava esimerkki kunkin tärkeän kansion sisältämästä tiedostosta tai kansiosta. Jos kyseessä on tiedosto, näytä siitä kuvaava esimerkkirivi. Työskentele komentokehotteessa ja näytä komennot, joilla etsit esimerkit.
+# c) FHS. "Important directories"
+/	Juurihakemisto, ylin hakemisto: 
+![image](https://github.com/user-attachments/assets/1cef84e0-d39e-4b53-8b1d-89fd6dc5fec5)
+
+/home/	Home hakemiston alla on kaikkien käyttäjien hakemistot, tässä tapauksessa vain yksi: 
+ ![image](https://github.com/user-attachments/assets/ac2ca093-47db-4d4e-b098-0ebf6b6a065e)
+
+/home/roosa/	Käyttäjän kotihakemisto:
+![image](https://github.com/user-attachments/assets/745e83ac-f89b-4228-98c6-9086a41b652a)
+
+Esimerkkikansio Desktop omasta kotihakemistosta. Koitin listata hakemiston sisällön, mutta mitään ei tullut. Ihmettelin tätä ja kokeilin tab-toimintoa, jotta saan varmasti oikean kansion auki (napautuksien määrässä on vielä opeteltavaa). Ilmeisesti Desktop kansiossa ei ole kuitenkaan sisältöä.
+![image](https://github.com/user-attachments/assets/da6c2a49-bb3e-45f5-b56b-e0a785cbf832)
+
+/etc/	kansion sisältö:
+![image](https://github.com/user-attachments/assets/73a27c40-8309-43a7-b167-7483bc45f45a)
+
+Esimerkkitiedosto crontab:
+![image](https://github.com/user-attachments/assets/023cce46-d3fc-463d-8b73-cf5901501a9e)
+
+![image](https://github.com/user-attachments/assets/bd492788-6732-4264-85f9-893dc8c3eea7)
+
+/media/ kansion alta löyty yksi kansio: roosa, joka ei näyttäisi sisältävän mitään:
+![image](https://github.com/user-attachments/assets/930ad37b-b7e4-4be5-9b7b-fcb2142269bf)
+
+/var/log/	alta löytyvät kansiot:
+![image](https://github.com/user-attachments/assets/49ec37a2-0335-425d-a9bb-5f0164a81c91)
+
+Esimerkki alternatives log:
+![image](https://github.com/user-attachments/assets/f025c34e-ca3d-426e-923b-678d3093530c)
+
+![image](https://github.com/user-attachments/assets/fcdae216-1ef9-43f6-9173-01ed544a0f5d)
 
 
 # d) The Friendly M. Näytä 2-3 kuvaavaa esimerkkiä grep-komennon käytöstä. Ohjeita löytyy 'man grep' ja tietysti verkosta.
