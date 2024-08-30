@@ -1,4 +1,4 @@
-cd ..# x) Tiivistelmä Command Line Basics Revisited
+# x) Tiivistelmä Command Line Basics Revisited
 Komentoriviohjelmassa liikutaan ja syötetään komentoja hakemistoissa (directory). Alla esimerkkejä komennoista eri tarkoituksiin:
 - liikkuminen ja lukeminen: pwd, ls, cd, less, |
 - tiedostojen muokkaaminen: mkdir, mv, cp, remdir, rm, rm -r
