@@ -27,16 +27,18 @@ Tämän jälkeen oli pitkä lista unpacking/selecting/setting up -rivejä. En er
 ![image](https://github.com/user-attachments/assets/4af31a05-3b04-4d7a-8e3c-d3f10fb0b28c)
 
 Esimerkit:
-SSH tutkin ohjeita ja koitin yhteyden ottamista, mutta sain alla olevan viestin: 
+## SSH 
+tutkin ohjeita ja koitin yhteyden ottamista, mutta sain alla olevan viestin: 
 ![image](https://github.com/user-attachments/assets/60e3bb35-0d58-451d-aa7b-4afe8a3f2ccc)
 
-nano
-uuden tiedoston luominen
+## nano
+uuden tiedoston luominen:
 ![image](https://github.com/user-attachments/assets/5b1dc8d6-e0d7-4b0c-91e6-f6bb5567409e)
-lisäsin tekstiä
+lisäsin tekstiä:
 ![image](https://github.com/user-attachments/assets/79281a96-8965-487f-a087-8cf4bc73aab4)
 
-units testasin 1.6 metrin muuttamista jaloiksi: units "1.6 meters" feet:
+## units 
+testasin 1.6 metrin muuttamista jaloiksi: units "1.6 meters" feet:
 ![image](https://github.com/user-attachments/assets/e65db1b8-6762-4722-ac4d-3b06c0418401)
 
 
