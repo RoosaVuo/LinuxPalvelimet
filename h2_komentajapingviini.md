@@ -36,7 +36,6 @@ uuden tiedoston luominen
 lisäsin tekstiä
 ![image](https://github.com/user-attachments/assets/79281a96-8965-487f-a087-8cf4bc73aab4)
 
-
 units testasin 1.6 metrin muuttamista jaloiksi: units "1.6 meters" feet:
 ![image](https://github.com/user-attachments/assets/e65db1b8-6762-4722-ac4d-3b06c0418401)
 
