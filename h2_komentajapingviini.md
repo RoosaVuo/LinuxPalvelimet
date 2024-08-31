@@ -103,12 +103,19 @@ Välilyönnillä pääsee eteenpäin ja b:llä taaksepäin. En löytänyt oikein
 # f) Rauta. Listaa testaamasi koneen rauta (‘sudo lshw -short -sanitize’). 
 ![image](https://github.com/user-attachments/assets/ee1f68cf-1a89-4f86-92db-b5b136209bce)
 Järjestelmä on VirtualBox
+
 Listauksessa kerrotaan muisti: 128LiB BIOS ja 2GiB System memory (RAM-muisti).
+
 Prosessori, johon on intergtoitu grafiikkakortti AMD Ryzen 5 5500U with Radeon Graphics. 
+
 input: PnP laitteet PNP0303 ja PNP0f03 - olisivatkohan nämä hiiri ja näppäimistö? Lisäksi integraatio VirtualBoxin hiireen, virtapainike, kaiuttimet ym.
+
 tallennstilaa on 82gt?
+
 levyn tyyppi on cd-asema, jonka koko on 64GB 
+
 display - SVGA 2 Adapter - olisko tämä toinen näyttö?
+
 Lisäksi host-koneeseen viitataan muutamassa kohtaa, mutta en osannut tulkita mitä nämä tarkoittavat
 
 
