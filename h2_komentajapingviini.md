@@ -76,6 +76,8 @@ Esimerkki alternatives log:
 
 
 # d) The Friendly M. Näytä 2-3 kuvaavaa esimerkkiä grep-komennon käytöstä. Ohjeita löytyy 'man grep' ja tietysti verkosta.
+man grepin lisäksi löytin ohjeita tältä sivulta: https://www.freecodecamp.org/news/grep-command-in-linux-usage-options-and-syntax-examples/
+
 ![image](https://github.com/user-attachments/assets/3ccac8f0-4ee6-4696-8b86-d63e9fd705f1)
 testissä komennot   
 grep -i "sana" tiedoston nimi = etsii kaikki vastaavuudet tiedostosta, ei huomioi pieniä ja suuria kirjaimia. Tämä ei jotenkin onnistunut, luetteli kaikki vaikka piti tulla vain lammaskoira ja vesikoira
@@ -117,6 +119,8 @@ levyn tyyppi on cd-asema, jonka koko on 64GB
 display - SVGA 2 Adapter - olisko tämä toinen näyttö?
 
 Lisäksi host-koneeseen viitataan muutamassa kohtaa, mutta en osannut tulkita mitä nämä tarkoittavat
+
+Huomio palautuksen jälkeen: esimerkiksi micron testaaminen oli unohtunut, testastin sen jälkikäteen myöttämällä micro komennon. 
 
 
 
