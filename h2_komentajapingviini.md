@@ -17,7 +17,7 @@ Materiaalissa oli paljon uusia komentoja, mutta tunnilla ja materiaalissa käyti
 ![image](https://github.com/user-attachments/assets/282bd7b8-7817-46b8-9269-4234cff8439b)
 
 
-# b) Apt. Asenna kolme itsellesi uutta komentoriviohjelmaa. Kokeile kutakin ohjelmaa sen pääasiallisessa käyttötarkoituksessa. Ota ruutukaappaus. Kaikki terminaaliohjelmat kelpaavat, TUI (text user interface) ja CLI (command line interface). Osaatko tehdä apt-get komennon, joka asentaa nämä kolme ohjelmaa kerralla?
+# b) Apt. Asenna kolme itsellesi uutta komentoriviohjelmaa. 
 En tiennyt mistä ja millaisia ohjelmia alan etsiä. Löysin tällaisen sivun (https://www.linux.fi/wiki/Komentorivikomennot), jonka perusteella etsin ohjelmia komennolla: apt-cache search (text editor, ssh, units) ja asensin: sudo apt-get -y install nano ssh units
 
 nanosta tuli ilmoitus, että se on jo ladattu ja päivitetään uusimpaan versioon:
@@ -26,6 +26,19 @@ nanosta tuli ilmoitus, että se on jo ladattu ja päivitetään uusimpaan versio
 Tämän jälkeen oli pitkä lista unpacking/selecting/setting up -rivejä. En erottanut missä kohtaa units asennettiin, joten annoin vielä uuden asennuskäskyn, jonka jälkeen tulikin tieto, että ohjelma on asennettu:
 ![image](https://github.com/user-attachments/assets/4af31a05-3b04-4d7a-8e3c-d3f10fb0b28c)
 
+Esimerkit:
+SSH tutkin ohjeita ja koitin yhteyden ottamista, mutta sain alla olevan viestin: 
+![image](https://github.com/user-attachments/assets/60e3bb35-0d58-451d-aa7b-4afe8a3f2ccc)
+
+nano
+uuden tiedoston luominen
+![image](https://github.com/user-attachments/assets/5b1dc8d6-e0d7-4b0c-91e6-f6bb5567409e)
+lisäsin tekstiä
+![image](https://github.com/user-attachments/assets/79281a96-8965-487f-a087-8cf4bc73aab4)
+
+
+units testasin 1.6 metrin muuttamista jaloiksi: units "1.6 meters" feet:
+![image](https://github.com/user-attachments/assets/e65db1b8-6762-4722-ac4d-3b06c0418401)
 
 
 # c) FHS. "Important directories"
@@ -65,8 +78,19 @@ Esimerkki alternatives log:
 ![image](https://github.com/user-attachments/assets/3ccac8f0-4ee6-4696-8b86-d63e9fd705f1)
 testissä komennot   
 grep -i "sana" tiedoston nimi = etsii kaikki vastaavuudet tiedostosta, ei huomioi pieniä ja suuria kirjaimia
+tämä ei jotenkin onnistunut, luetteli kaikki vaikka piti tulla vain lammaskoira ja vesikoira
+
+![image](https://github.com/user-attachments/assets/8f8d9c84-daa8-47fa-af44-9dfc5ad211be)
+
 grep -c "sana" tiedoston nimi = laskee montako kertaa sana esiintyy
+samoin tässä tuli virhe. Onkohan tiedostossani vikaa, kun laskee kaikki sanat yhdeksi
+
+![image](https://github.com/user-attachments/assets/9657c194-8d6b-4f9b-b62f-fdd71e2b662d)
+
 grep -l "sana" * = näyttää missä tiedostoissa sana löytyy
+
+![image](https://github.com/user-attachments/assets/f33c215a-dcc1-44d1-8952-83c907c8a5cc)
+
 
 
 # e) Pipe. Näytä esimerkki putkista (pipes, "|").
@@ -77,17 +101,16 @@ Kokeilin komentoa ls /etc|less
 
 Välilyönnillä pääsee eteenpäin ja b:llä taaksepäin. En löytänyt oikein muita kansioita, joissa olisi ollut paljon sisältä putkituksen testaamiseksi.
 
-# f) Rauta. Listaa testaamasi koneen rauta (‘sudo lshw -short -sanitize’). Asenna lshw tarvittaessa. Selitä ja analysoi listaus.
+# f) Rauta. Listaa testaamasi koneen rauta (‘sudo lshw -short -sanitize’). 
+![image](https://github.com/user-attachments/assets/ee1f68cf-1a89-4f86-92db-b5b136209bce)
+Järjestelmä on VirtualBox
+Listauksessa kerrotaan muisti: 128LiB BIOS ja 2GiB System memory (RAM-muisti).
+Prosessori, johon on intergtoitu grafiikkakortti AMD Ryzen 5 5500U with Radeon Graphics. 
+input: PnP laitteet PNP0303 ja PNP0f03 - olisivatkohan nämä hiiri ja näppäimistö? Lisäksi integraatio VirtualBoxin hiireen, virtapainike, kaiuttimet ym.
+tallennstilaa on 82gt?
+levyn tyyppi on cd-asema, jonka koko on 64GB 
+display - SVGA 2 Adapter - olisko tämä toinen näyttö?
+Lisäksi host-koneeseen viitataan muutamassa kohtaa, mutta en osannut tulkita mitä nämä tarkoittavat
 
 
 
-
-Ohjelmien asennus
-sudo apt-get update
-apt-cache search version control
-apt-cache show git
-sudo apt-get -y install git
-Selitä ja analysoi - rautatehtävässä tärkeää on siis oma analyysi ja selitys, ei pelkkä listaus
-Lokit
-journalctl -f
-sudo journalctl
