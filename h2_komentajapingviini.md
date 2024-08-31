@@ -28,7 +28,7 @@ Tämän jälkeen oli pitkä lista unpacking/selecting/setting up -rivejä. En er
 
 Esimerkit:
 ## SSH 
-tutkin ohjeita ja koitin yhteyden ottamista, mutta sain alla olevan viestin: 
+tutkin ohjeita ja koitin yhteyden ottamista, mutta sain alla olevan viestin, jonka jälkeen en ollut varma miten jatkaa: 
 ![image](https://github.com/user-attachments/assets/60e3bb35-0d58-451d-aa7b-4afe8a3f2ccc)
 
 ## nano
