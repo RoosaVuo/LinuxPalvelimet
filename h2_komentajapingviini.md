@@ -78,13 +78,11 @@ Esimerkki alternatives log:
 # d) The Friendly M. Näytä 2-3 kuvaavaa esimerkkiä grep-komennon käytöstä. Ohjeita löytyy 'man grep' ja tietysti verkosta.
 ![image](https://github.com/user-attachments/assets/3ccac8f0-4ee6-4696-8b86-d63e9fd705f1)
 testissä komennot   
-grep -i "sana" tiedoston nimi = etsii kaikki vastaavuudet tiedostosta, ei huomioi pieniä ja suuria kirjaimia
-tämä ei jotenkin onnistunut, luetteli kaikki vaikka piti tulla vain lammaskoira ja vesikoira
+grep -i "sana" tiedoston nimi = etsii kaikki vastaavuudet tiedostosta, ei huomioi pieniä ja suuria kirjaimia. Tämä ei jotenkin onnistunut, luetteli kaikki vaikka piti tulla vain lammaskoira ja vesikoira
 
 ![image](https://github.com/user-attachments/assets/8f8d9c84-daa8-47fa-af44-9dfc5ad211be)
 
-grep -c "sana" tiedoston nimi = laskee montako kertaa sana esiintyy
-samoin tässä tuli virhe. Onkohan tiedostossani vikaa, kun laskee kaikki sanat yhdeksi
+grep -c "sana" tiedoston nimi = laskee montako kertaa sana esiintyy. Samoin tässä tuli virhe. Onkohan tiedostossani vikaa, kun laskee kaikki sanat yhdeksi
 
 ![image](https://github.com/user-attachments/assets/9657c194-8d6b-4f9b-b62f-fdd71e2b662d)
 
