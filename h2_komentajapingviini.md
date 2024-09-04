@@ -78,6 +78,8 @@ Esimerkki alternatives log:
 # d) The Friendly M. Näytä 2-3 kuvaavaa esimerkkiä grep-komennon käytöstä. Ohjeita löytyy 'man grep' ja tietysti verkosta.
 
 [päivitys: olin tulknnut väärin, että komento hakee sanat, kun se hakeekin rivit. Eli testit toimivat oikein]
+
+
 man grepin lisäksi löytin ohjeita tältä sivulta: https://www.freecodecamp.org/news/grep-command-in-linux-usage-options-and-syntax-examples/
 
 ![image](https://github.com/user-attachments/assets/3ccac8f0-4ee6-4696-8b86-d63e9fd705f1)
