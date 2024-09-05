@@ -60,8 +60,6 @@ Tältä päivältä näkyy äskeisen kohdan testaukset ensin selaimella ja sitte
 
 
 # c) Etusivu uusiksi. 
-Sivun tulee näkyä suoraan palvelimen etusivulla http://localhost/. Sivua pitää pystyä muokkaamaan normaalina käyttäjänä, ilman sudoa. Tee uusi, laita vanhat pois päältä. Uusi sivu on hattu.example.com, ja tämän pitää näkyä: asetustiedoston nimessä, asetustiedoston ServerName-muuttujassa sekä etusivun sisällössä (esim title, h1 tai p).
-
 Seuraan Tero Karvisen ohjetta: https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/ 
 Ensin poistan esimerkkisivun komennolla echo "Default"|sudo tee /var/www/html/index.html
 Kävin katsomassa, että html-tiedosto on oikeassa paikassa ja avasin sen:
@@ -141,6 +139,46 @@ Tämäkään ei auta ja seuraava neuvo on tarkastaa error loki: sudo tail /var/l
 Loki ei tee minua paljon viisaammaksi ja kysyn taas chatgptltä apua tulkitsemiseen: ei löytynyt mitään uutta, luvissa on vikaa. Katson uudelleen virtual hostin konfiguraatiota ja löydän kirjoitusvirheen. ChatGpt neuvoo mistä pääsen muokkaamaan tietoja: sudo nano /etc/apache2/sites-available/lakki.example.com.conf
 
 ![image](https://github.com/user-attachments/assets/c110078d-4b81-4387-ae6d-81376534975e)
+
+Muutin pisteen kauttaviivaksi, mutta saan silti saman virheviestin. Tarkastin vielä cat-komennolla, että kaikki tiedot ovat nyt oikein:
+
+![image](https://github.com/user-attachments/assets/6293419e-c9f4-4098-8c7e-4d9fb1fe764e)
+
+Koitin uudelleen enabloida virtualhostin ja käynnistää uudelleen apachan, jos niissä oli jotain vikaa ja nyt curl -H komento antaa jo lupaavan tuloksen:
+
+![image](https://github.com/user-attachments/assets/6bde30b0-d323-463a-8c99-37850420dc61)
+
+Testaan ratkaisua vielä selaimella- localhost toimii
+![image](https://github.com/user-attachments/assets/c85b5839-beab-42fa-9d06-7f02ca7357cc)
+
+lakki.example.com ei toimi
+
+![image](https://github.com/user-attachments/assets/c8dcd4f6-d8ed-4e14-8ffc-99d5abd792b2)
+
+Huomasin, että ohjeessa on vielä yksi kohta, jossa määritellään lakki.example.com host-nimeksi: sudoedit /etc/hosts. Lisäsin tänne 127.0.1.1. lakki.example.com ja tarkastin cat /etc/hosts -komennolla:
+
+![image](https://github.com/user-attachments/assets/764f340c-62f2-4701-9f62-42760e67cb3f)
+
+Vihdoin sivu toimii sekä lakki.example.com osoitteella, että localhost osoitteella, kummallakin oma teksti:
+
+![image](https://github.com/user-attachments/assets/56785bac-3719-4882-8c00-4b6a16d6615c)
+
+![image](https://github.com/user-attachments/assets/2b1ba0b5-7cd5-4715-9dd0-699400747e67)
+
+![image](https://github.com/user-attachments/assets/483e31bb-4024-48db-ba85-2d66ab7e6329)
+
+sudo tail /var/log/apache2/access.log|nl  tarkastin lokin ja siellä näkyy yritykset, joissa lakki ei vielä toiminut ja lopula toimiva kysely:
+![image](https://github.com/user-attachments/assets/9769d3fb-f258-49bd-81ee-d88ac89f00c1)
+
+Lopuksi muutin lakki.example.com hakemiston index.html sivun tekstiksi lakki.example.com
+
+![image](https://github.com/user-attachments/assets/c9345b3f-c718-4349-8d3e-716365f1090a)
+
+Nimi näkyy tiedoston nimessä, ServerName muuttujassa ja etusivulla:
+![image](https://github.com/user-attachments/assets/0cfc36fd-670d-47d1-ae27-67caa507eba0)
+
+![image](https://github.com/user-attachments/assets/a8b6d96a-af23-48a9-b824-14e9842d0ecd)
+
 
 
 
