@@ -138,7 +138,9 @@ Vieläkään ei toimi:
 
 Kysyn chat gptltä neuvoa ja saan ohjeen koittaa uudelleen latausta: sudo systemctl reload apache2
 Tämäkään ei auta ja seuraava neuvo on tarkastaa error loki: sudo tail /var/log/apache2/error.log
+Loki ei tee minua paljon viisaammaksi ja kysyn taas chatgptltä apua tulkitsemiseen: ei löytynyt mitään uutta, luvissa on vikaa. Katson uudelleen virtual hostin konfiguraatiota ja löydän kirjoitusvirheen. ChatGpt neuvoo mistä pääsen muokkaamaan tietoja: sudo nano /etc/apache2/sites-available/lakki.example.com.conf
 
+![image](https://github.com/user-attachments/assets/c110078d-4b81-4387-ae6d-81376534975e)
 
 
 
