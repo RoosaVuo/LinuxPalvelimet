@@ -73,8 +73,28 @@ Kävin katsomassa, että html-tiedosto on oikeassa paikassa ja avasin sen:
 Seuraavaksi teen uuden name based virtual hostin komennolla sudoedit /etc/apache2/sites-available/hattu.example.com.conf
 jotain meni pieleen ja saan virheviestin No such file or diretory
 
+![image](https://github.com/user-attachments/assets/00a209ae-8d5d-4f62-9a70-d4c77488e36c)
+
+Mietin johtuiko tämä sen hetken hakemistosta ja siirryn juurihakemistoon, mutta komennon jälkeen avautuu tällainen ikkuna: 
+![image](https://github.com/user-attachments/assets/54456eb7-5579-4d2f-aace-7e0053cc0644)
+Tämä ei auttanut, joten kysyin chatgptltä apua, kuvasin ongelman ja virheviestin ja chat gptn ohjeella tajusin täyttää tyhjään näkymään tiedot:
+
+![image](https://github.com/user-attachments/assets/45c3163c-69a5-4eca-8a40-ce92916ada74)
+
+Tämän jälkeen tiedot näyttivät oikeilta: 
+![image](https://github.com/user-attachments/assets/ba91e692-47d6-44af-8ff7-6eea1b7bf304)
+
+Aktivoin virtualhostin ja käynnistin apachen uudelleen:
+
+![image](https://github.com/user-attachments/assets/81828faf-a9f4-4e52-9a57-53135a581946)
+
+Testasin välissä mitä curl komento kertoo: host puuttuu:
+
+![image](https://github.com/user-attachments/assets/79f85ccd-3be4-446a-b982-053d5a15f9ee)
 
 
+seuraavaksi loin webbisivun hattu.example.com osoitteelle. Käytin komentoa mkdir -p /var/www/hattu.example.com/ -> tämä ei toiminut, joten yritin uudelleen sudo mkdir -p /var/www/hattu.example.com/ komennolla ja se toimi.
+$ echo hattu > /var/www/hattu.example.com//index.html
 
 
 # e) Tee validi HTML5 sivu.
