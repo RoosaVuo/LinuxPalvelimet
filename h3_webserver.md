@@ -15,11 +15,44 @@ Name-based Virtual Host Support
 
 
 Tehtävänannot:
+
+Lähtötilanne: 5.9.2024 klo 16.10. Apache on jo asennettu. 
+
 # a) testaa localhost-osoite 
- Asenna Apache-weppipalvelin, jos se ei ole jo asennettuna.
+Testaan localhostin selaimella kirjoittamalla osoiteriville "localhost" ja saan seuraavan näkymän, joka kertoo, että sivu toimii:
+![image](https://github.com/user-attachments/assets/c965f1a0-b0d5-43be-a6dc-ef65468acd04)
+
+
+Testasin toiminnan myös komentorivillä "curl localhost" komennolla ja html koodi vastaa selaimella näkymyttä sivua, joten sivu toimii:
+![image](https://github.com/user-attachments/assets/43362c0b-fc03-4aea-805f-9ee054bc9007)
+
 
 # b) Loki
 Etsi lokista rivit, jotka syntyvät, kun lataat omalta palvelimeltasi yhden sivun. Analysoi rivit (eli selitä yksityiskohtaisesti jokainen kohta ja numero, etsi tarvittaessa lähteitä).
+
+Aloitin selvittämällä millä komennolla loki löytyy. Olin kirjoittanut tunnilta muistiin komennon sudo tail /var/log/apache2/access.log|nl 
+
+Tutkin vielä Apachen dokumenttia ja totesin, että tämän komennon pitäisi sopia tarkoitukseen: https://httpd.apache.org/docs/current/logs.html 
+
+Komennon tuloksena tulee: 
+![image](https://github.com/user-attachments/assets/ea883b4e-da08-4f77-853e-43217d981af4)
+
+Käytin Apachen dokumentointia apuna analysointiin https://httpd.apache.org/docs/current/logs.html
+
+127.0.0.1 IP-osoite
+-- tässä kohdassa olisi pyynnön tehneen käyttäjän id, mutta - kertoo, että se tieto puuttuu
+[] sisällä on pyynnön ajankohta muodossa [day/month/year:hour:minute:second zone]
+"GET / HTTP/1.1" käytetty metodi on GET ja pyydetty resurssi HTTP/1.1
+200 statuskoodi. 2-alkuinen koodi kertoo, että pyyntö onnnistui. 4-alkuinen koodi kertoo virheestä
+3380 palautuneen objektin koko
+"-" sivusto, joka sisältää tai on linkitetty pyynnön kohteeseen
+"Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" asiakasselaimen raportoimat tiedot 
+
+Lokissa on merkintöjä eiliseltä (4.9.) ja tältä päivältä (5.9.) Tältä päivältä näkyy äskeisen kohdan testaukset ensin selaimella ja sitten komentorivin curl komennolla riveillä 7-10.
+7, 8 j 10 rivit antavat 200 koodin, eli pyynnöt ovat onnistuneet. 9 rivin 404-koodi kertoo virheestä favicon.ico pyynnön osalta. 7-9 rivien loppuosat kertovat, että käytössä on ollut Firefox-selain ja Linux järjestelmä.
+
+
+
 
 # c) Etusivu uusiksi. 
 Tee uusi name based virtual host. Sivun tulee näkyä suoraan palvelimen etusivulla http://localhost/. Sivua pitää pystyä muokkaamaan normaalina käyttäjänä, ilman sudoa. Tee uusi, laita vanhat pois päältä. Uusi sivu on hattu.example.com, ja tämän pitää näkyä: asetustiedoston nimessä, asetustiedoston ServerName-muuttujassa sekä etusivun sisällössä (esim title, h1 tai p).
