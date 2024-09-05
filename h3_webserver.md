@@ -93,8 +93,40 @@ Testasin välissä mitä curl komento kertoo: host puuttuu:
 ![image](https://github.com/user-attachments/assets/79f85ccd-3be4-446a-b982-053d5a15f9ee)
 
 
-seuraavaksi loin webbisivun hattu.example.com osoitteelle. Käytin komentoa mkdir -p /var/www/hattu.example.com/ -> tämä ei toiminut, joten yritin uudelleen sudo mkdir -p /var/www/hattu.example.com/ komennolla ja se toimi.
-$ echo hattu > /var/www/hattu.example.com//index.html
+seuraavaksi koitin luoda webbisivut, mutta huomasin, että jotain on mennyt pieleen. En saa luotua www-hakemiston alle kansiota, mutta var hakemistoon on tullut www.hattu.example.com hakemisto 
+![image](https://github.com/user-attachments/assets/bbd1cf8d-4818-4e75-a868-e75c05a0abfb)
+
+Olin tehtävän kanssa jumissa ja päätin aloittaa alusta. Pysäytin apachen komennolla sudo systemctl stop apache2
+
+Tutkin ohjetta tarkemmin ja päätin kokeilla eri hakemistoa. Katsoin mitä roosa hakemiston alta löytyy ja tarkemmin Public hakemistoa. Uusi yritys tehdä uusi virtual host ja webbisivu polkuun /home/roosa/Public/lakki.example.com/
+
+![image](https://github.com/user-attachments/assets/69a52e2c-617b-43e9-897f-4ed06d0e706f)
+
+Aloitin alusta komennolla sudoedit /etc/apache2/sites-available/lakki.example.com.conf
+Täytin tiedot, jotka näkyvät cat /etc/apache2/sites-available/lakki.example.com.conf komennolla:
+
+![image](https://github.com/user-attachments/assets/6fcc22e7-bb0c-4e18-8aac-e788724e0567)
+
+Käynnistin apachen uudestaan:
+
+![image](https://github.com/user-attachments/assets/a65f69b0-3d00-4e9f-937b-db2b25f2f162)
+
+
+Loin hakemiston lakki.example.com/ polkuun /home/roosa/Public/ Ja tarkastin, että se löytyy oikeasta paikasta.
+![image](https://github.com/user-attachments/assets/7d5db42d-fe98-4ce6-971c-d3e70885e2aa)
+
+Loin html-tiedoston kansioon ja tarkastin, että se on siellä:
+![image](https://github.com/user-attachments/assets/08113a2b-08cb-49ce-8ad9-54537c45a78d)
+
+Ja tarkastin selaimesta, että "lakki" näkyy:
+![image](https://github.com/user-attachments/assets/b79e418a-92bc-415b-8c40-d413d2b9dafb)
+
+Testausta: curl -H 'Host: lakki.example.com' localhost antaa forbidden virheviestin, jota käytiin myös oppitunnilla.
+curl localhost toimii. Koitan korjata 403 virheviestin komennolla 
+
+ 'chmod ugo+x $HOME $HOME/Public/', 'ls -ld $HOME $HOME/Public/'
+
+
 
 
 # e) Tee validi HTML5 sivu.
