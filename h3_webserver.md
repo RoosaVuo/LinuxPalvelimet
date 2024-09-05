@@ -54,8 +54,10 @@ Käytin Apachen dokumentointia apuna analysointiin https://httpd.apache.org/docs
 "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" asiakasselaimen raportoimat tiedot 
 
 Lokissa on merkintöjä eiliseltä (4.9.) ja tältä päivältä (5.9.) 
+
 Tältä päivältä näkyy äskeisen kohdan testaukset ensin selaimella ja sitten komentorivin curl komennolla riveillä 7-10.
-7, 8 j 10 rivit antavat 200 koodin, eli pyynnöt ovat onnistuneet. 9 rivin 404-koodi kertoo virheestä favicon.ico pyynnön osalta. 7-9 rivien loppuosat kertovat, että käytössä on ollut Firefox-selain ja Linux järjestelmä.
+
+7, 8 ja 10 rivit antavat 200 koodin, eli pyynnöt ovat onnistuneet. 9 rivin 404-koodi kertoo virheestä favicon.ico pyynnön osalta. 7-9 rivien loppuosat kertovat, että käytössä on ollut Firefox-selain ja Linux järjestelmä.
 
 
 
