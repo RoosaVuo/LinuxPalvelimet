@@ -123,8 +123,21 @@ Ja tarkastin selaimesta, että "lakki" näkyy:
 
 Testausta: curl -H 'Host: lakki.example.com' localhost antaa forbidden virheviestin, jota käytiin myös oppitunnilla.
 curl localhost toimii. Koitan korjata 403 virheviestin komennolla 
+ 'chmod ugo+x $HOME $HOME/Public/', 'ls -ld $HOME $HOME/Public/' -> sain virheviestin No such file or direcotry:
+ 
+![image](https://github.com/user-attachments/assets/8f1c3f02-b81c-484d-a15c-e22eb4ab8952)
 
- 'chmod ugo+x $HOME $HOME/Public/', 'ls -ld $HOME $HOME/Public/'
+TArkastin käyttöoikeudet ls -ld komennolla.
+Uusi yritys toisella polulla, joka vastaa tiedostoa chmod ugo+x /home/roosa/Public/lakki.example.com/
+chmod komennon kohdalla ei tullut nyt virheviestiä, mutta komento curl -H 'Host: lakki.example.com' localhost antaa silti virheviestin. Koitin sammuttaa ja käynnistää uudelleen Apachen.
+
+![image](https://github.com/user-attachments/assets/09c447b7-03b7-4c9b-80dd-31bc601184fe)
+
+Vieläkään ei toimi:
+![image](https://github.com/user-attachments/assets/2ce8e4b4-392b-44e0-983d-08f47a4eaa1a)
+
+Kysyn chat gptltä neuvoa ja saan ohjeen koittaa uudelleen latausta: sudo systemctl reload apache2
+Tämäkään ei auta ja seuraava neuvo on tarkastaa error loki: sudo tail /var/log/apache2/error.log
 
 
 
