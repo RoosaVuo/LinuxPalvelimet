@@ -14,8 +14,6 @@ Name-based Virtual Host Support
 - Lähde Tero Karvinen 2018: Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
 
 
-Tehtävänannot:
-
 Lähtötilanne: 5.9.2024 klo 16.10. Apache on jo asennettu. 
 
 # a) testaa localhost-osoite 
@@ -61,9 +59,23 @@ Tältä päivältä näkyy äskeisen kohdan testaukset ensin selaimella ja sitte
 
 
 
-
 # c) Etusivu uusiksi. 
-Tee uusi name based virtual host. Sivun tulee näkyä suoraan palvelimen etusivulla http://localhost/. Sivua pitää pystyä muokkaamaan normaalina käyttäjänä, ilman sudoa. Tee uusi, laita vanhat pois päältä. Uusi sivu on hattu.example.com, ja tämän pitää näkyä: asetustiedoston nimessä, asetustiedoston ServerName-muuttujassa sekä etusivun sisällössä (esim title, h1 tai p).
+Sivun tulee näkyä suoraan palvelimen etusivulla http://localhost/. Sivua pitää pystyä muokkaamaan normaalina käyttäjänä, ilman sudoa. Tee uusi, laita vanhat pois päältä. Uusi sivu on hattu.example.com, ja tämän pitää näkyä: asetustiedoston nimessä, asetustiedoston ServerName-muuttujassa sekä etusivun sisällössä (esim title, h1 tai p).
+
+Seuraan Tero Karvisen ohjetta: https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/ 
+Ensin poistan esimerkkisivun komennolla echo "Default"|sudo tee /var/www/html/index.html
+Kävin katsomassa, että html-tiedosto on oikeassa paikassa ja avasin sen:
+
+![image](https://github.com/user-attachments/assets/27e8f3c9-7119-4e42-b796-389ecaf7dea7)
+
+![image](https://github.com/user-attachments/assets/05ead494-06bc-4ca8-88ac-ee332cdb6d32)
+
+Seuraavaksi teen uuden name based virtual hostin komennolla sudoedit /etc/apache2/sites-available/hattu.example.com.conf
+jotain meni pieleen ja saan virheviestin No such file or diretory
+
+
+
+
 
 # e) Tee validi HTML5 sivu.
 
