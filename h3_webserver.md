@@ -247,14 +247,23 @@ esimerkki curl-i
 ![image](https://github.com/user-attachments/assets/5b033491-0832-4a94-9fea-38698a7a98f6)
 
 -i muotoinen komento antoi alkuun 9 riviä lisää:
+
 HTTP/1.1 200 OK  -> kertoo statuksen, joka on ok
+
 Date: Sat, 07 Sep 2024 09:46:16 GMT -> komennon ajankohta
+
 Server: Apache/2.4.62 (Debian) -> apachen versio ja missä käyttöjärjestelmässä se on
+
 Last-Modified: Sat, 07 Sep 2024 09:32:38 GMT -> viimeinen muokkausajankohta
+
 ETag: "cc-62184345fcac5" -> sivun versiokohtainen tunniste lähde: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag 
+
 Accept-Ranges: bytes -> selain kertoo, että se tukee latausta tavuina lähde: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges
+
 Content-Length: 204 -> sisällön pituus
+
 Vary: Accept-Encoding -> en osannut tulkita tämän tarkoitusta: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary 
+
 Content-Type: text/html -> sisältö on html tekstimuodossa
 
 
