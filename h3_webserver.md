@@ -43,7 +43,7 @@ Aloitin selvittämällä millä komennolla loki löytyy. Olin kirjoittanut tunni
 
 Tutkin vielä Apachen dokumenttia ja totesin, että tämän komennon pitäisi sopia tarkoitukseen: https://httpd.apache.org/docs/current/logs.html 
 
-Komennon tuloksena tulei: 
+Komennon tuloksena tuli: 
 ![image](https://github.com/user-attachments/assets/ea883b4e-da08-4f77-853e-43217d981af4)
 
 Käytin Apachen dokumentointia apuna analysointiin https://httpd.apache.org/docs/current/logs.html
