@@ -86,7 +86,7 @@ jotain meni pieleen ja sain virheviestin "No such file or diretory"
 
 ![image](https://github.com/user-attachments/assets/00a209ae-8d5d-4f62-9a70-d4c77488e36c)
 
-Mietin johtuiko tämä sen hetken hakemistosta ja siirryin juurihakemistoon, mutta komennon jälkeen avautui tällainen ikkuna: 
+Mietin johtuiko tämä sen hetken hakemistosta ja siirryin juurihakemistoon, mutta komennon jälkeen avautui muokkausikkuna: 
 ![image](https://github.com/user-attachments/assets/54456eb7-5579-4d2f-aace-7e0053cc0644)
 
 Tämä ei auttanut, joten kysyin chatgptltä apua, kuvasin ongelman ja virheviestin ja chat gptn ohjeella tajusin täyttää tyhjään näkymään tiedot:
