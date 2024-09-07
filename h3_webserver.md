@@ -14,7 +14,7 @@ Name-based Virtual Host Support
 - Lähde Tero Karvinen 2018: Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
 
 
-Lähtötilanne: 5.9.2024 klo 16.10. Apache on jo asennettu. 
+Lähtötilanne: 5.9.2024 klo 16.10. Virtuaalikone VirtualBoxin kautta, käyttöjärjestelmänä Debian Linux. Host kone Windows. Apache on jo asennettu. 
 
 # a) testaa localhost-osoite 
 Testaan localhostin selaimella kirjoittamalla osoiteriville "localhost" ja saan seuraavan näkymän, joka kertoo, että sivu toimii:
@@ -183,5 +183,63 @@ Nimi näkyy tiedoston nimessä, ServerName muuttujassa ja etusivulla:
 
 
 # e) Tee validi HTML5 sivu.
+Aloitin lukemalla ohjeen sivulta Tero Karvinen 2012 https://terokarvinen.com/2012/short-html5-page/ 
+
+siirryin home/roosa/Public/lakki.example.com hakemistoon ja avasin index.html tiedoston muokkaamista varten:
+![image](https://github.com/user-attachments/assets/e1e8aa0f-49e5-4bb4-a31d-0ee8f813d46b)
+
+Määritin documentin tyypiksi HTML. Liäsin head-osioon otsikon ja metatietoihin merkkisetiksi utf-8.
+![image](https://github.com/user-attachments/assets/be10fa9e-da3a-47d6-a2ce-d28649c6f5e2)
+
+Sivu näyttää samat tiedot komentorivillä avattuna:
+![image](https://github.com/user-attachments/assets/7e4a744a-4e38-4b4f-8209-47020338adfe)
+
+Sivusto toimii selaimessa, näyttää sen mitä lisäsin html tiedostoon:
+![image](https://github.com/user-attachments/assets/a9c8280c-b878-45a2-a982-6bd8f19034f6)
+
+Muokkasin index.html sivua vielä niin, että käytän ääkkösiä. Testasin curl komennolla ja selaimella, ääkköset näkyvät oikein:
+
+![image](https://github.com/user-attachments/assets/6fc5d582-e081-4fe0-ac25-fd6492937fa7)
+
+![image](https://github.com/user-attachments/assets/65f0887a-f4b4-4f30-9df3-8eef88630695)
+
+Testasin sivua valirator.w3.org sivulla, mutta saan virheviestin, jonka mukaan tulkitsen, että testiä ei voi tehdä, koska sivulla ei ole host-companya?
+![image](https://github.com/user-attachments/assets/dbdb27d0-e429-4559-a237-07e02789f597)
+
+Testasin sivuston avulla html koodin ja saan varoituksen, jossa kehhoitetaan lisäämään kielen määritelmä.
+![image](https://github.com/user-attachments/assets/3fb60369-fad6-4af3-b822-98d870af4397)
+
+Lisäsin lang="fi" määritelmän html tägiin. Ja testasin uudestaan curl, selaimen ja validatorin:
+![image](https://github.com/user-attachments/assets/5eca0d7a-12a8-4005-aee5-eadee8a35936)
+
+![image](https://github.com/user-attachments/assets/2edd3254-3631-4130-ab23-6c7cfafb348d)
+
+![image](https://github.com/user-attachments/assets/10b5df79-2a06-417e-831b-74eb011a04fc)
+
 
 # f) Anna esimerkit 'curl -I' ja 'curl' -komennoista. Selitä 'curl -I' muutamasta näyttämästä otsakkeesta (response header), mitä ne tarkoittavat.
+
+Tutkin ensin man curl komennolla mitä curl -i on tarkoitus tehdä:
+![image](https://github.com/user-attachments/assets/6929817f-a064-4935-972d-48dea364c964)
+
+esimerkki curl
+
+![image](https://github.com/user-attachments/assets/f8ddff95-73ce-43cd-ba2e-8076eed1479d)
+
+
+esimerkki curl-i
+
+![image](https://github.com/user-attachments/assets/5b033491-0832-4a94-9fea-38698a7a98f6)
+
+-i muotoinen komento antoi alkuun 9 riviä lisää:
+HTTP/1.1 200 OK  -> kertoo statuksen, joka on ok
+Date: Sat, 07 Sep 2024 09:46:16 GMT -> komennon ajankohta
+Server: Apache/2.4.62 (Debian) -> apachen versio ja missä käyttöjärjestelmässä se on
+Last-Modified: Sat, 07 Sep 2024 09:32:38 GMT -> viimeinen muokkausajankohta
+ETag: "cc-62184345fcac5" -> sivun versiokohtainen tunniste lähde: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag 
+Accept-Ranges: bytes -> selain kertoo, että se tukee latausta tavuina lähde: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges
+Content-Length: 204 -> sisällön pituus
+Vary: Accept-Encoding -> en osannut tulkita tämän tarkoitusta: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary 
+Content-Type: text/html -> sisältö on html tekstimuodossa
+
+
