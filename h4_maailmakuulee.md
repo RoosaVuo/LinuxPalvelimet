@@ -1,4 +1,4 @@
-## x) Lue ja tiivistä. Tiivistelmäksi riittää muutama ranskalainen viiva per artikkeli. (Tässä alakohdassa ei tarvitse tehdä testejä tietokoneella)
+## x) Lue ja tiivistä. Tiivistelmäksi riittää muutama ranskalainen viiva per artikkeli. 
 aloitus 12.9. klo 21.40 lopetus 22.05
 
 a) Pilvipalvelimen vuokraus ja asennus
