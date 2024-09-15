@@ -83,6 +83,46 @@ Virtuaalikoneen luominen oli valmis ja tallensin itselleni IP-osoitteen:
 
 
 ## b) Tee alkutoimet omalla virtuaalipalvelimellasi: tulimuuri päälle, root-tunnus kiinni, ohjelmien päivitys.
+Aloitus 15.9. klo 15.03 lopetus 16.00
+
+Avasin VirtualBoxin virtuaalikoneeni ja tein päivitykset komennolla: sudo apt-get update.
+
+Otin yhteyden virtuaalipalvelimeen komennolla ssh root@164.90.201.37. Terminaali tarkasti haluanko varmasti ottaa yhteyden ja vastasin "yes" ja seuraavaksi syötin virtuaalipalvelimen salasanan. Yhteys avautui:
+
+![image](https://github.com/user-attachments/assets/c493dfea-8843-443c-8a7d-700f473e7e20)
+
+Ensimmäisenä määritin aukon SSH yhteyttä varten (sudo ufw allow 22/tcp), mutta sain virheviestin sudo: ufw: command not found.
+Palomuuria ei siis löytynyt, joten asensin palomuurin komennolla sudo apt-get install ufw. Tämän jälkeen annoin uudelleen komennon sudo ufw allow 22/tcp.
+Otin palomuurin käyttöön komennolla sudo ufw enable ja terminaalin kysyessä haluanko varmasti laittaa päälle vastasin y eli kyllä.
+
+![image](https://github.com/user-attachments/assets/a514767e-c889-411e-9d64-d79839a8f878)
+
+![image](https://github.com/user-attachments/assets/71ef1669-419c-4bac-b1b4-cecb8fef53a8)
+
+Seuraavaksi loin käyttäjän komennolla sudo adduser roosa
+annoin salasanan ja koko nimen:
+![image](https://github.com/user-attachments/assets/9ec65762-8aa1-4375-9a15-e0bfad31d0d8)
+
+Lisäsin roosa-käyttäjän sudo ryhmään sudo adduser roosa sudo
+![image](https://github.com/user-attachments/assets/93af6641-1744-4d5f-a059-2a1f27f7ba7d)
+
+Testasin käyttäjän toimivuutta avaamalla uuden terminaalin ja ottamalla yhteyden ssh roosa@164.90.201.37
+Susannan esimerkin mukaan testasin tunnusten toimivuutta hakemalla päivitykset (sudo apt-get update)
+
+![image](https://github.com/user-attachments/assets/cc3ec9cd-2aaa-45d6-a0f1-caec50690dc4)
+
+Seuraavaksi lukitsin root-kirjautumisen sudo usermod --lock root ja sudoedit /etc/ssh/sshd_config ->
+![image](https://github.com/user-attachments/assets/5c83ece8-5c21-4620-b80a-3ebc70b2c173)
+
+Käynnistin SSHn uudelleen sudo service ssh restart ja kirjauduin ulos. 
+
+Otin uuden SSH yhteyden ja tein päivitykset komennoilla sudo apt-get update ja sudo apt-get upgrade:
+
+![image](https://github.com/user-attachments/assets/748a007b-db4d-44ff-b7ee-c4f8c5cbe432)
+
+Katkaisin roosa-käyttäjän yhteyden ja tarkastin vielä, että root-kirjautumisoikeudet on suljettu: 
+
+![image](https://github.com/user-attachments/assets/3c8d819e-a056-4f97-b38a-c29afa392fa3)
 
 
 ## c) Asenna weppipalvelin omalle virtuaalipalvelimellesi. Korvaa testisivu. Kokeile, että se näkyy julkisesti. Kokeile myös eri koneelta, esim kännykältä.
