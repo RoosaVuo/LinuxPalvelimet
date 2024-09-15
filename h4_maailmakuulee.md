@@ -27,7 +27,8 @@ f) Palvelimen ohjelmien päivitys
 - tee palomuuriin reikä apachelle sudo ufw allow 80/tcp
 - asenna apache: sudo apt-get install apache2 
 
-Lähteet: Susanna Lehto 2022: Teoriasta käytäntöön pilvipalvelimen avulla (h4) (opiskelijan esimerkkiraportti) ja Karvinen 2012: First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS
+Lähteet: Susanna Lehto 2022: Teoriasta käytäntöön pilvipalvelimen avulla (h4) (opiskelijan esimerkkiraportti): https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/ 
+ja Karvinen 2012: First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS: https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/
 
 ## a) Vuokraa oma virtuaalipalvelin haluamaltasi palveluntarjoajalta. 
 Lähtötilanne: Virtuaalikone VirtualBoxin kautta
