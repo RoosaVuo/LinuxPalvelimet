@@ -31,10 +31,15 @@ Lähteet: Susanna Lehto 2022: Teoriasta käytäntöön pilvipalvelimen avulla (h
 
 ## a) Vuokraa oma virtuaalipalvelin haluamaltasi palveluntarjoajalta. 
 Lähtötilanne: Virtuaalikone VirtualBoxin kautta
+
 RAM muisti 2GiB
+
 Virtuaalikoneella käytettävissä 64GB levy
+
 käyttöjärjestelmänä Debian Linux
+
 Host kone Windows 11 Home, jonka levy 474Gt
+
 prosessori AMD Ryzen 5 5500U with Radeon Graphics
 
 aloitus 15.9. klo 14.20 lopetus 14.59 
