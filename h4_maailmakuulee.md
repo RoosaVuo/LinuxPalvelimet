@@ -15,11 +15,11 @@ a) Pilvipalvelimen vuokraus ja asennus
 d) Palvelin suojaan palomuurilla
 
   - ota yhteys virtuaalikoneeseen ssh root@ipnumero komennolla -> tee päivitykset sudo apt-get update -> asenna palomuuri sudo apt-get install ufw -> tee reikä porttia varten sudo ufw allos 22/tpc -> laita palomuuri päälle sudo ufw enable
+  -  lisää käyttäjä komennolla sudo adduser käyttäjänimi -> keksi hyvä salasana -> tee käyttäjästä pääkäyttäjä sudo adduser käyttäjänimi sudo -> testaa, että ssh yhteys toimii käyttäjällä -> lukitse juuri sudo usermod --lock root
+  -  ota root kirjautuminen pois päältä: sudoedit /etc/ssh/sshd_config -> PermitRootLogin no -> sudo service ssh restart
 
 e) Kotisivut palvelimelle
-
-- lisää käyttäjä komennolla sudo adduser käyttäjänimi -> keksi hyvä salasana -> tee käyttäjästä pääkäyttäjä sudo adduser käyttäjänimi sudo -> testaa, että ssh yhteys toimii käyttäjällä -> lukitse juuri sudo usermod --lock root
-    - ota root kirjautuminen pois päältä: sudoedit /etc/ssh/sshd_config -> PermitRootLogin no -> sudo service ssh restart
+- ip-osoitteella saa yhteyden, mutta on parempi vuokrata domain ja käyttää sitä
 
 f) Palvelimen ohjelmien päivitys
 
