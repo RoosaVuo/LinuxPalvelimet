@@ -43,7 +43,7 @@ Host kone Windows 11 Home, jonka levy 474Gt
 
 prosessori AMD Ryzen 5 5500U with Radeon Graphics
 
-aloitus 15.9. klo 14.20 lopetus 14.59 
+Aloitus 15.9. klo 14.20 lopetus 14.59 
 Käytin ohjeena Susannan Lehdon tarkkaa raporttia Teoriasta käytäntöön pilvipalvelimen avulla https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/ 
 Läheenä myös Tero Karvisen https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/
 
