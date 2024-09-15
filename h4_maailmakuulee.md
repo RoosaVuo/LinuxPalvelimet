@@ -127,4 +127,37 @@ Katkaisin roosa-käyttäjän yhteyden ja tarkastin vielä, että root-kirjautumi
 
 ## c) Asenna weppipalvelin omalle virtuaalipalvelimellesi. Korvaa testisivu. Kokeile, että se näkyy julkisesti. Kokeile myös eri koneelta, esim kännykältä.
 
+15.9. aloitus klo 17.23 lopetus 17.40
+
+Aloitin tekemällä palomuuriin reiän Apachea varten: sudo ufw allow 80/tcp
+![image](https://github.com/user-attachments/assets/762f11db-b41a-43f8-aadb-03a6d21419a1)
+
+Sitten asensin Apache2n sudo apt-get -y install apache2:
+
+![image](https://github.com/user-attachments/assets/91f43172-17db-4c7c-92a1-8cde45925c58)
+
+Tarkastin, että index.html löytyy oikeasta paikasta /var/www/html/index.html.
+Korvasin Apachen testisivun tekstillä "Hello world!" komento:  echo Hello world! |sudo tee /var/www/html/index.html
+![image](https://github.com/user-attachments/assets/3c5623b5-1747-427c-a22f-a4ba69294aa1)
+
+Käynnistin apachen uudestaan sudo systemctl restart apache2 ja testasin komentorivillä: 
+![image](https://github.com/user-attachments/assets/35eb24c8-3599-4ade-9579-9385ea2f45ac)
+
+Sama testi selaimella, oikea teksti tulee näkyviin:
+![image](https://github.com/user-attachments/assets/b9482b8c-c9e8-43ef-af27-7b30c0fe3153)
+
+Ja kännykällä:
+
+![image](https://github.com/user-attachments/assets/07b03ee1-be1d-49ab-b5e0-5ceba343c6ad)
+
+
+
+
+
+
+
+
+
+
+
   
