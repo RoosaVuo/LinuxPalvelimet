@@ -107,6 +107,30 @@ Tarkastin https://validator.w3.org sivulla, että html sivu on validi:
 
 ## b) Alidomain. Tee kaksi uutta alidomainia, jotka osoittava omaan koneeseesi. Esimerkiksi palvelu on example.com -> linuxkurssi.example.com. Tee toinen alidomain A-tietueella ja toinen CNAME-tietueella. Alidomainit ovat tyypillisesti ilmaisia, kun sinulla on päädomain (example.com).
 
+23.9. aloitus 14.35 lopetus 14.46
+
+Käytin lähteenä namecheapin omaa ohjetta: https://www.namecheap.com/support/knowledgebase/article.aspx/9776/2237/how-to-create-a-subdomain-for-my-domain/ 
+
+Kirjauduin namecheapiin ja valitsin valikosta Domain List ja domainin vierestä Manage:
+
+![image](https://github.com/user-attachments/assets/dd14a927-24c2-43cf-8f2f-136eb8501d1c)
+
+Valitsin yläavalikosta Advanced DNS.
+Loin yhden A Recordin, jolloin roosa.rvuorela.me osoittaa IP osoitteeseen.
+Loin CNAME Recordin, jolloin linuxkurssi.rvuorela.me osoite osoittee rvuorela.me osoitteeseen.
+
+![image](https://github.com/user-attachments/assets/599f8763-194c-445b-8588-e0443463e82a)
+
+molemmat alidomainit näyttävät oeltussivun:
+
+![image](https://github.com/user-attachments/assets/67f21cd7-0eee-4d27-87d4-d3a2c2b65bc0)
+
+![image](https://github.com/user-attachments/assets/816d92e7-ee3c-40b1-9acc-829020471186)
+
+
+
+
+
 ## c) Pubkey. Automatisoi kirjautuminen julkisella SSH-avaimella.
 
 ## d) Tutki jonkin nimen DNS-tietoja 'host' ja 'dig' -komennoilla. Käytä kumpaakin komentoa kaikkiin nimiin ja vertaa tuloksia. Katso man-sivulta, miten komennot toimivat - esimerkiksi miten 'dig' näyttää kaikki kentät. Analysoi tulokset. Etsi tarvittaessa uusia lähteitä haastaviin kohtiin. Sähköpostin todentamiseen liittyvät SPF ja DMARC -tietojen yksityiskohdat on jätetty vapaaehtoiseksi lisätehtäväksi. Tutkittavat nimet:
