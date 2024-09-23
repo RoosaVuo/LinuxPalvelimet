@@ -134,9 +134,21 @@ molemmat alidomainit näyttävät oeltussivun:
 ## c) Pubkey. Automatisoi kirjautuminen julkisella SSH-avaimella.
 
 23.9. ohjeiden lukemista ja lähteiden etsimistä 15.30-15.50 
+klo 16.38 - 16.55 varsinainen tehtävä
 
-Tutkin erilaisia lähteitä ja tämä vaikutti luotettavalta sivulta, joten käytin lähteenä: https://www.ssh.com/academy/ssh/keygen
+Tutkin erilaisia lähteitä ja tämä vaikutti luotettavalta sivulta, joten käytin lähteenä: https://www.ssh.com/academy/ssh/keygen ja https://www.ssh.com/academy/ssh/copy-id
 
+Aloitin luomalla avaimen komennolla: ssh-keygen -t rsa -b 4096. Oletustiedosto ja passphrase kohdat jätin tyhjiksi: 
+
+![image](https://github.com/user-attachments/assets/31763c79-2e8c-4ad2-a8ca-27a7be626157)
+
+Seuraavaksi kopioin avaimen palvelimelle, jotta siitä tulee "authorized key" ja voin kirjautua ilman salasanaa:
+
+![image](https://github.com/user-attachments/assets/3409e99c-2d35-4515-9ff8-c49f0a2a12bb)
+
+Testasin vielä avaamalla uuden teriminaalin ja ottamalla uuden yhteyden käyttäjään. Avain toimi halutusti, eikä salasanaa tarvitse syöttää:
+
+![image](https://github.com/user-attachments/assets/9c1b1f7b-d538-4c67-8883-1df2ed14f621)
 
 
 ## d) Tutki jonkin nimen DNS-tietoja 'host' ja 'dig' -komennoilla. Käytä kumpaakin komentoa kaikkiin nimiin ja vertaa tuloksia. Katso man-sivulta, miten komennot toimivat - esimerkiksi miten 'dig' näyttää kaikki kentät. Analysoi tulokset. Etsi tarvittaessa uusia lähteitä haastaviin kohtiin. Sähköpostin todentamiseen liittyvät SPF ja DMARC -tietojen yksityiskohdat on jätetty vapaaehtoiseksi lisätehtäväksi. Tutkittavat nimet:
