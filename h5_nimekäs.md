@@ -117,11 +117,11 @@ Kirjauduin namecheapiin ja valitsin valikosta Domain List ja domainin vierestä 
 
 Valitsin yläavalikosta Advanced DNS.
 Loin yhden A Recordin, jolloin roosa.rvuorela.me osoittaa IP osoitteeseen.
-Loin CNAME Recordin, jolloin linuxkurssi.rvuorela.me osoite osoittee rvuorela.me osoitteeseen.
+Loin CNAME Recordin, jolloin linuxkurssi.rvuorela.me osoite osoittaa rvuorela.me osoitteeseen.
 
 ![image](https://github.com/user-attachments/assets/599f8763-194c-445b-8588-e0443463e82a)
 
-molemmat alidomainit näyttävät oeltussivun:
+Molemmat alidomainit näyttävät oletussivun:
 
 ![image](https://github.com/user-attachments/assets/67f21cd7-0eee-4d27-87d4-d3a2c2b65bc0)
 
