@@ -50,6 +50,7 @@ Seuraavaksi syötin komennot sudo sudo a2ensite rvuorela.me ja sudo systemctl re
 ![image](https://github.com/user-attachments/assets/d1232b05-b9f8-41ff-aabc-4c95090504d9)
 
 Lisäsin rvuorela.me nimen Host listaan:
+
 ![image](https://github.com/user-attachments/assets/caf91eaf-fae5-4437-883b-a601c3f65804)
 
 Testasin sivua selaimella ja sain virheviestin: 
