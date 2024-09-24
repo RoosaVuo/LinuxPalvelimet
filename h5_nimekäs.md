@@ -241,6 +241,9 @@ nimi     sekunnit, jonka jälkeen record päivitetään   kyselyluokka IN=intern
 ;; MSG SIZE  rcvd: vastauksen koko tavuina
 
 
+Kaikki kolme tutkittavaa nimeä antoivat samankaltaisia tuloksia: onnistuneet kyselyt, ei laajennusjärjestelmiä,  vastauksen koot ja vastausten ajat melko lähellä toisiaan.
+
+
 
 
 
