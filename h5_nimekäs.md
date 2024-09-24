@@ -167,6 +167,7 @@ Testasin vielä avaamalla uuden teriminaalin ja ottamalla uuden yhteyden käytt�
 ## d) Tutki jonkin nimen DNS-tietoja 'host' ja 'dig' -komennoilla. Käytä kumpaakin komentoa kaikkiin nimiin ja vertaa tuloksia. Katso man-sivulta, miten komennot toimivat - esimerkiksi miten 'dig' näyttää kaikki kentät. Analysoi tulokset. Etsi tarvittaessa uusia lähteitä haastaviin kohtiin. Sähköpostin todentamiseen liittyvät SPF ja DMARC -tietojen yksityiskohdat on jätetty vapaaehtoiseksi lisätehtäväksi. 
 
 Aloitus 24.9. 12.50 lopetus 14.40
+
 Manuaaleja ei löytynyt suoraan ja selvisi, että host ja dig komentoja ei ole asennettuna. Koitin asentaa ne sudo apt-get -y install host dig -komennolla. Hostin osalta latasi bind9-hos ohjelman. Tältä sivulta löysin, että molemmat komennot host ja dig löytyvät bind9 alta: https://bind9.readthedocs.io/en/v9.18.14/manpages.html Latasin bind9n komennolla sudo apt-get -y install bind9:
 
 ![image](https://github.com/user-attachments/assets/c6fabbdc-07aa-468a-9130-7b22b367f5e8)
@@ -176,6 +177,7 @@ Manuaaleja ei löytynyt suoraan ja selvisi, että host ja dig komentoja ei ole a
 Jostain syystä en saa manuaaleja auki komentoriviltä, joten käytän nettisivua apuna: https://bind9.readthedocs.io/en/v9.18.14/manpages.html#host-dns-lookup-utility
 
 Dokumentaation mukaan host komento muuttaa nimen IP-osoitteeksi ja toisin päin.
+
 Koitin host komentoa rvuorela.me nimelle, mutta sain taas virheviestin bash: host: command not found. Tässä kohtaa pyysin chat-Gptltä apua ja vastauksena sain, että minun täytyy asentaa dnsutensils. Asensin siis komennolla: sudo apt-get -y install dnsutils. Tämän jälkeen pääsin myös man host komennolla manuaaliin. 
 
 Tein uuden yrityksen host rvuorela.me:
@@ -193,7 +195,9 @@ host haaga-helia.fi
 Rivien selitykset: 
 
 has address - kertoo domainin IPv4-osoitteen. 
+
 has IPv6 address - kertoo domainin IPv6 osoitteen
+
 - rvuorela.me yksi IP-osoite, joka vastaa Digital Oceanista vuokrattua IP-osoitetta ja namecheapin asetuksissa olevaa IP-osoitetta
 - pieni pieniharrastepuoti.com yksi IP-osoite ja yksi IPv6 osoite
 - haaga-helia.fi kolme IP-osoitetta
