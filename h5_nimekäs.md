@@ -151,8 +151,68 @@ Testasin vielä avaamalla uuden teriminaalin ja ottamalla uuden yhteyden käytt�
 ![image](https://github.com/user-attachments/assets/9c1b1f7b-d538-4c67-8883-1df2ed14f621)
 
 
-## d) Tutki jonkin nimen DNS-tietoja 'host' ja 'dig' -komennoilla. Käytä kumpaakin komentoa kaikkiin nimiin ja vertaa tuloksia. Katso man-sivulta, miten komennot toimivat - esimerkiksi miten 'dig' näyttää kaikki kentät. Analysoi tulokset. Etsi tarvittaessa uusia lähteitä haastaviin kohtiin. Sähköpostin todentamiseen liittyvät SPF ja DMARC -tietojen yksityiskohdat on jätetty vapaaehtoiseksi lisätehtäväksi. Tutkittavat nimet:
+## d) Tutki jonkin nimen DNS-tietoja 'host' ja 'dig' -komennoilla. Käytä kumpaakin komentoa kaikkiin nimiin ja vertaa tuloksia. Katso man-sivulta, miten komennot toimivat - esimerkiksi miten 'dig' näyttää kaikki kentät. Analysoi tulokset. Etsi tarvittaessa uusia lähteitä haastaviin kohtiin. Sähköpostin todentamiseen liittyvät SPF ja DMARC -tietojen yksityiskohdat on jätetty vapaaehtoiseksi lisätehtäväksi. 
+
+Tutkittavat nimet:
   rvuorela.me (Oma domain-nimesi). Vertaa tuloksia nimen vuokraajan (namecheap.com, name.com...) weppiliittymässä näkyviin asetuksiin.
   pieniharrastepuoti.com Jonkin pikkuyrityksen, kerhon tai yksittäisen henkilön weppisivut. (Ei kuitenkaan kurssikaverin tällä viikolla vuokrattua nimeä).
-  Jonkin suuren ja kaikkien tunteman palvelun tiedot.
+  haaga-helia.fi Jonkin suuren ja kaikkien tunteman palvelun tiedot.
+
+Aloitus 24.9. 12.50 lopetus
+Manuaaleja ei löytynyt suoraan ja selvisi, että host ja dig komentoja ei ole asennettuna. Koitin asentaa ne sudo apt-get -y install host dig -komennolla. Hostin osalta latasi bind9-hos ohjelman. Tältä sivulta löysin, että molemmat komennot host ja dig löytyvät bind9 alta: https://bind9.readthedocs.io/en/v9.18.14/manpages.html Latasin bind9n komennolla sudo apt-get -y install bind9:
+
+![image](https://github.com/user-attachments/assets/c6fabbdc-07aa-468a-9130-7b22b367f5e8)
+
+![image](https://github.com/user-attachments/assets/03846285-f58a-4b20-bff7-97524643e2dd)
+
+Jostain syystä en saa manuaaleja auki komentoriviltä, joten käytän nettisivua apuna: https://bind9.readthedocs.io/en/v9.18.14/manpages.html#host-dns-lookup-utility
+
+Dokumentaation mukaan host komento muuttaa nimen IP-osoitteeksi ja toisin päin.
+Koitin host komentoa rvuorela.me nimelle, mutta sain taas virheviestin bash: host: command not found. Tässä kohtaa pyysin chat-Gptltä apua ja vastauksena sain, että minun täytyy asentaa dnsutensils. Asensin siis komennolla: sudo apt-get -y install dnsutils. Tämän jälkeen pääsin myös man host komennolla manuaaliin. 
+
+Tein uuden yrityksen host rvuorela.me:
+
+![image](https://github.com/user-attachments/assets/86f73e3f-0bab-44e8-9769-d08604f75ca3)
+
+host pieniharrastepuoti.com
+
+![image](https://github.com/user-attachments/assets/7f1ca999-963c-44e8-ba69-5dfc0ba10396)
+
+host haaga-helia.fi
+
+![image](https://github.com/user-attachments/assets/a09d2141-a860-4427-9a66-68f5db157ef2)
+
+Rivien selitykset: 
+
+has address - kertoo domainin IPv4-osoitteen. 
+has IPv6 address - kertoo domainin IPv6 osoitteen
+- rvuorela.me yksi IP-osoite, joka vastaa Digital Oceanista vuokrattua IP-osoitetta ja namecheapin asetuksissa olevaa IP-osoitetta
+- pieni pieniharrastepuoti.com yksi IP-osoite ja yksi IPv6 osoite
+- haaga-helia.fi kolme IP-osoitetta
+
+mail is handled by - kertoo mikä sähköpostipalvelin vastaanottaa sähköpostit. Tästä oli vaikea löytää tietoa, mutta tämä sivu kertoi, että kyseinen rivi on MX record https://www.tecmint.com/linux-host-command-examples-for-querying-dns-lookups/ ja täältä löytyi selitys MX recordille: https://www.cloudflare.com/learning/dns/dns-records/dns-mx-record/ 
+
+Dig comentoa käytetään usein vianmäärityksessä: https://bind9.readthedocs.io/en/v9.18.14/manpages.html#std-iscman-dig 
+
+dig 164.90.201.37 rvuorela.me
+
+![image](https://github.com/user-attachments/assets/1c019848-a2c5-45d9-9def-581424420b54)
+
+dig 95.217.27.158 pieniharrastepuoti.com
+
+![image](https://github.com/user-attachments/assets/0a84891f-5f04-4103-a780-a4f12db909fd)
+
+
+dig 104.26.1.90 haaga-helia.fi
+
+![image](https://github.com/user-attachments/assets/5468fe0b-7f87-4ee9-a5a5-5190a322164e)
+
+
+
+
+
+
+
+
+  
 
