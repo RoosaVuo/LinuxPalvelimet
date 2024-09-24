@@ -1,3 +1,16 @@
+Lähtötilanne:
+Virtuaalikone VirtualBoxin kautta
+
+RAM muisti 2GiB
+
+Virtuaalikoneella käytettävissä 64GB levy
+
+käyttöjärjestelmänä Debian Linux
+
+Host kone Windows 11 Home, jonka levy 474Gt
+
+prosessori AMD Ryzen 5 5500U with Radeon Graphics
+
 ## a) Kotisivu. Tee vähintään kolmen erillisen weppisivun kotisivu ja kopioi se näkymään palvelimellesi. Käytä name based virtual hosting tekniikkaa. Sivujen muokkaamisen pitää onnistua ilman pääkäyttäjän oikeuksia, niiden kopioiminen pääkäyttäjänä testisivun paikalle ei käy. Kotisivujen ei tarvitse olla hienoja, mutta niiden tulee olla validia HTML:ää ja linkittää toisiinsa.
 
 23.9. aloitus 12.00 lopetus klo 14.24
