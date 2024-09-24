@@ -220,7 +220,25 @@ dig 104.26.1.90 haaga-helia.fi
 
 ![image](https://github.com/user-attachments/assets/5468fe0b-7f87-4ee9-a5a5-5190a322164e)
 
+Lähteet analyysiin: https://www.jsdelivr.com/blog/how-to-read-a-dig-result-a-guide-for-network-novices/ ja https://phoenixnap.com/kb/linux-dig-command-examples 
 
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 30353
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1                   -----------> status:NOERROR - onnistunut kysely
+
+;; OPT PSEUDOSECTION:
+; laajennusjärjestelmä, jos kätyöss  käytetyt flagit paketin koko
+
+;; QUESTION SECTION:                                                                 
+;nimi, johon kysely tehtiin kyselyluokka IN=internet   kyselyn tyyppi A=A-record
+
+;; ANSWER SECTION: 
+nimi     sekunnit, jonka jälkeen record päivitetään   kyselyluokka IN=internet   kyselyn tyyppi A=A-record   nimeen liittyvä IP-osoite(jos useampi, niin useampi rivi)
+
+;; Query time: kauanko vastauksen saamiseen meni aikaa millisekunteina 
+;; SERVER: palvelin ja portti
+;; WHEN: kyselyn ajankohta (viikonpäivä, kuukausi, päivä, kellonaika, vuosi)
+;; MSG SIZE  rcvd: vastauksen koko tavuina
 
 
 
