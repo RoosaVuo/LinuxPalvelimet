@@ -166,12 +166,7 @@ Testasin vielä avaamalla uuden teriminaalin ja ottamalla uuden yhteyden käytt�
 
 ## d) Tutki jonkin nimen DNS-tietoja 'host' ja 'dig' -komennoilla. Käytä kumpaakin komentoa kaikkiin nimiin ja vertaa tuloksia. Katso man-sivulta, miten komennot toimivat - esimerkiksi miten 'dig' näyttää kaikki kentät. Analysoi tulokset. Etsi tarvittaessa uusia lähteitä haastaviin kohtiin. Sähköpostin todentamiseen liittyvät SPF ja DMARC -tietojen yksityiskohdat on jätetty vapaaehtoiseksi lisätehtäväksi. 
 
-Tutkittavat nimet:
-  rvuorela.me (Oma domain-nimesi). Vertaa tuloksia nimen vuokraajan (namecheap.com, name.com...) weppiliittymässä näkyviin asetuksiin.
-  pieniharrastepuoti.com Jonkin pikkuyrityksen, kerhon tai yksittäisen henkilön weppisivut. (Ei kuitenkaan kurssikaverin tällä viikolla vuokrattua nimeä).
-  haaga-helia.fi Jonkin suuren ja kaikkien tunteman palvelun tiedot.
-
-Aloitus 24.9. 12.50 lopetus
+Aloitus 24.9. 12.50 lopetus 14.40
 Manuaaleja ei löytynyt suoraan ja selvisi, että host ja dig komentoja ei ole asennettuna. Koitin asentaa ne sudo apt-get -y install host dig -komennolla. Hostin osalta latasi bind9-hos ohjelman. Tältä sivulta löysin, että molemmat komennot host ja dig löytyvät bind9 alta: https://bind9.readthedocs.io/en/v9.18.14/manpages.html Latasin bind9n komennolla sudo apt-get -y install bind9:
 
 ![image](https://github.com/user-attachments/assets/c6fabbdc-07aa-468a-9130-7b22b367f5e8)
