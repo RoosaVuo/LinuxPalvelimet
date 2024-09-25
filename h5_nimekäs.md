@@ -86,6 +86,8 @@ Tässä kohtaaa kysyi ChatGptltä apua. Kerroin mitä olen tekemässä ja millai
 Tarkastin oikeudet komennoilla ls -ld /home/roosa ja ls -ld /home/roosa/public_html
 Oikeudet näyttivät olevan puutteelliset, joten chat gptn ohjeella korjasin ne sudo chmod 711 /home/roosa ja sudo chmod 755 /home/roosa/public_html
 
+[Tunnilla käytiin vielä läpi mitä oikeuksia kannattaa/ei kannata antaa ja nämä olivat ok = ei liikaa oikeuksia]
+
 ChatGptn selvennys:
 
 ![image](https://github.com/user-attachments/assets/07f91d28-b226-4261-90be-365459e5e98e)
