@@ -4,7 +4,7 @@ Voit käyttää testipalvelinta, kunhan se ei näy Internetiin.
 Riittää, kun ohjelmasi näkyy esimerkiksi Django Adminsissa.
 Voit halutessasi tehdä aivan samanlaisen kuin Teron CRM-esimerkissä. Jos olet jo taitavampi, voit hieman soveltaa.
 
-Aloitus 29.9. klo 14.55
+Aloitus 29.9. klo 14.55 lopetus 16.05
 
 Ensin asensin kehitysympäristön sudo apt-get -y install virtualenv 
 
