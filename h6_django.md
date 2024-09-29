@@ -110,7 +110,7 @@ Lähde Karvinen 2021: Django 4 Instant Customer Database Tutorial https://teroka
 Ohje: Voit halutessasi tehdä asennuksen omalle, paikalliselle virtuaalikoneelle. Sen ei tarvitse näkyä Internetiin.
 Lähde: Karvinen 2021: Deploy Django 4 - Production Install https://terokarvinen.com/2022/deploy-django/ 
 
-29.9. aloitus klo 17.35
+29.9. aloitus klo 17.35 lopetus 19.15 välissä tauko uusi aloitus 20.15
 
 Testasin localhostin aloitussivun, olin muokannut sitä aiemmin niin, että näky teksti "Default":
 
@@ -140,9 +140,35 @@ Otin hattu.example.comin pois käytöstä, mutta se ei auttanut:
 
 ![image](https://github.com/user-attachments/assets/72951850-686f-4283-9fc2-c93fe196822b)
 
-Koitin antaa reand and execute -oikeudet, jotta apache voi operoida, mutta tämäkään ei auttanut: 
+Kysyin chatGptltä nuevoa ja koitin antaa read and execute -oikeudet, jotta apache voi operoida, mutta tämäkään ei auttanut: 
 
 ![image](https://github.com/user-attachments/assets/05e2d4bb-91f6-440a-a116-e2dd4c2635ae)
+
+Menin index.html tiedostoon ja se näyttikin tyhjältä, vaikka olin aiemmin lisännyt tekstiä. Lisäsin uudestaan tekstiä, mutta silti sain 404 virheviestin:
+
+![image](https://github.com/user-attachments/assets/96e4c6d0-8c67-4f5b-9379-577406630283)
+
+Accesslog:
+
+![image](https://github.com/user-attachments/assets/a0d1e343-9b8b-437c-be51-fda1b8c6964d)
+
+ErrorLog:
+
+![image](https://github.com/user-attachments/assets/ad4abe97-d8a3-4253-93d3-883b6aaf2810)
+
+Tarkastin tiedostojen nimet ja polut ja koitin uudelleen ottaa muut sivut pois käytöstä ja käynnistin apachen uudelleen, mutta virhe pysyi silti:
+
+![image](https://github.com/user-attachments/assets/e6afda81-d154-4000-8e70-c679c61d69b1)
+
+Siirryin katsomaan hosts tietoja: sudoedit /etc/hosts. Otin This host address -kohdasta kaikki aiemmilla viikoilla lisäämäni pois:
+
+![image](https://github.com/user-attachments/assets/32ebd001-aeaf-4bfd-8330-359580c43c94)
+
+Tämäkään ei auttanut vaan sain edelleen 404 virheilmoituksen:
+
+![image](https://github.com/user-attachments/assets/269d6d76-5f24-42de-b126-232bd6d50f8a)
+
+Pidin välissä tauon. Sammutin virtuaalikoneen ja käynnistin uudelleen. 
 
 
 
