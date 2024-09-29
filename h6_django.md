@@ -110,7 +110,7 @@ Lähde Karvinen 2021: Django 4 Instant Customer Database Tutorial https://teroka
 Ohje: Voit halutessasi tehdä asennuksen omalle, paikalliselle virtuaalikoneelle. Sen ei tarvitse näkyä Internetiin.
 Lähde: Karvinen 2021: Deploy Django 4 - Production Install https://terokarvinen.com/2022/deploy-django/ 
 
-29.9. aloitus klo 17.35 lopetus 19.15 välissä tauko uusi aloitus 20.15
+29.9. aloitus klo 17.35 lopetus 19.15 välissä tauko uusi aloitus 20.15 ja lopetus 22.17
 
 Testasin localhostin aloitussivun, olin muokannut sitä aiemmin niin, että näky teksti "Default":
 
