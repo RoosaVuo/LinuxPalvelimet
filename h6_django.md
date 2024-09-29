@@ -125,10 +125,24 @@ echo "roosaproj/static toimii"|tee publicwsgi/roosaproj/static/index.html
 
 Loin uuden Virtualhostin komennolla sudoedit /etc/apache2/sites-available/roosaproj.conf ja lisäsin tarvittavat tiedot:
 
+![image](https://github.com/user-attachments/assets/a9ca1777-5ed2-4dba-a0ea-657489c1a64d)
 
+Aktivoin uuden sivun (sudo a2ensite roosaproj.conf) ja otin muut pois käytöstä (sudo a2dissite 000-default.conf ).
+Tarkastin konfiguroinnin (/sbin/apache2ctl configtest). Teron ohjeen mukaan AH00558 + Syntax ok, on ok ja voi jatkaa. Katson toimiiko sivu AH00112 varoituksesta huolimatta.
 
+![image](https://github.com/user-attachments/assets/8235d400-faf9-4bad-a842-73e89bea0e8b)
 
+Käynnistin apachen uudelleen komennolla sudo systemctl restart apache2. Sain virheviestin 404 Not Found 
 
+![image](https://github.com/user-attachments/assets/9b9dfeb9-9107-48a1-9946-17ebe59f7480)
+
+Otin hattu.example.comin pois käytöstä, mutta se ei auttanut:
+
+![image](https://github.com/user-attachments/assets/72951850-686f-4283-9fc2-c93fe196822b)
+
+Koitin antaa reand and execute -oikeudet, jotta apache voi operoida, mutta tämäkään ei auttanut: 
+
+![image](https://github.com/user-attachments/assets/05e2d4bb-91f6-440a-a116-e2dd4c2635ae)
 
 
 
