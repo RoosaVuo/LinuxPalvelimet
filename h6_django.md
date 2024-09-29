@@ -107,7 +107,32 @@ Käynnistin kehityspalveimen uudestaan (komento: ./manage.py runserver)  ja test
 Lähde Karvinen 2021: Django 4 Instant Customer Database Tutorial https://terokarvinen.com/2022/django-instant-crm-tutorial/ 
 
 ## b) Tee Djangon tuotantotyyppinen asennus
-Voit halutessasi tehdä asennuksen omalle, paikalliselle virtuaalikoneelle. Sen ei tarvitse näkyä Internetiin.
-Karvinen 2021: Deploy Django 4 - Production Install
+Ohje: Voit halutessasi tehdä asennuksen omalle, paikalliselle virtuaalikoneelle. Sen ei tarvitse näkyä Internetiin.
+Lähde: Karvinen 2021: Deploy Django 4 - Production Install https://terokarvinen.com/2022/deploy-django/ 
+
+29.9. aloitus klo 17.35
+
+Testasin localhostin aloitussivun, olin muokannut sitä aiemmin niin, että näky teksti "Default":
+
+![image](https://github.com/user-attachments/assets/1698d3d8-9910-4446-91dd-9cfc2edfeaa4)
+
+![image](https://github.com/user-attachments/assets/ea081afe-fca1-4a3a-bf15-9680ca915279)
+
+Tein kotihakemistoon hakemistot publicwsgi/roosaproj/static/ ja sinne oletustekstin komennolla: 
+echo "roosaproj/static toimii"|tee publicwsgi/roosaproj/static/index.html
+
+![image](https://github.com/user-attachments/assets/41e4d2e6-09cc-4db6-b4ff-d4f5efad5b5b)
+
+Loin uuden Virtualhostin komennolla sudoedit /etc/apache2/sites-available/roosaproj.conf ja lisäsin tarvittavat tiedot:
+
+
+
+
+
+
+
+
+
+
 
 
