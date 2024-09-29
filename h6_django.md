@@ -241,7 +241,70 @@ Käynnistin Apachen uudelleen ja testasin curl -s komennolla toimiiko sivu ja on
 
 ![image](https://github.com/user-attachments/assets/067fdc2e-3f89-4323-9638-67261ab467ae)
 
-Apache oli käytössä, mutta sivu antaa virheviestin 403 Forbidden.
+Apache oli käytössä, mutta sivu antaa virheviestin 403 Forbidden. Koitin tulkita errorlogia:
+
+![image](https://github.com/user-attachments/assets/556eaa92-eec0-445d-8eea-4f545add6dc6)
+
+Tajusin, että startproject olisi pitänyt varmaankin suorittaa rooproj-kansiossa, ja olin varmaankin ollut jossain toisessa sijainnissa. Suoritin django-admin startproject rooproj komennon uudestaan:
+
+![image](https://github.com/user-attachments/assets/e739154b-26cd-4de7-8883-7cecedf33f26)
+
+Jotain meni ehkä kuitenkin hassusti, sillä publicwsgin alla oli kolme allekaista rooproj-kansiota. Päivitin sites-available/rooproj.conf tämän mukaan ja samoin python3.11. 
+
+![image](https://github.com/user-attachments/assets/cdd60f82-095a-4a71-9f5f-ba629abc03a2)
+
+![image](https://github.com/user-attachments/assets/826c7557-5694-4c80-ab45-308fee55be33)
+
+Käynnistin Apachen uudelleen ja sain sivun toimimaan:
+
+![image](https://github.com/user-attachments/assets/b1dd4833-9c1c-4681-9ae4-11a3442d95d3)
+
+
+![image](https://github.com/user-attachments/assets/4479fd7f-a55e-4fa8-a204-4b2d0b4a38f3)
+
+Otin virheentunnistuksen pois päältä komennolla micro rooproj/settings.py 
+
+![image](https://github.com/user-attachments/assets/d7ba9d42-4dda-49d9-b353-eded84a95578)
+
+Apachen uudelleen käynnistys komennolla: sudo systemctl restart apache2
+Hain otsikon komennolla curl -s localhost|grep title ja siihen tuli esimerkin mukainen "Not Found"
+
+![image](https://github.com/user-attachments/assets/dc1b6653-c37c-40eb-b9e9-d25cafc08ab1)
+
+Ja samoin selain antaoi Not Found -ilmoituksen tarkemman virheviestin sijaan:
+
+![image](https://github.com/user-attachments/assets/9c12d93d-b35b-4235-bc3a-1c658b9f0c24)
+
+Localhos/admin sivu toimi, mutta en ollut vielä luonut käyttäjää:
+
+![image](https://github.com/user-attachments/assets/60fe0bf8-c078-4bf8-8ab9-3d8f9e4b8b5c)
+
+Tyylin lisääminen: Muokkasin settings.py tiedostoa  micro rooproj/settings.py. Lisäsin tiedoston alkuun import os ja STATIC_URL alle STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+![image](https://github.com/user-attachments/assets/96e95a5e-48f2-428b-98da-f3b3d9092319)
+
+Seuraavaksi käytin komentoa ./manage.py collectstatic joka kopioi tyylit static-hakemistoon:
+
+![image](https://github.com/user-attachments/assets/afa50402-aacc-45f3-8c77-b359c2e57acc)
+
+Tyylit tulivat onnistuneesti käyttöön: 
+
+![image](https://github.com/user-attachments/assets/09212645-7f1a-4ade-a0b3-84369ee3d97a)
+
+Käynnistin migraatiot:
+
+![image](https://github.com/user-attachments/assets/11ea0e15-59c6-4c56-9f5c-1216f2576ba4)
+
+Loin itselleni käyttäjän:
+
+![image](https://github.com/user-attachments/assets/76285e6e-2aa7-4b60-995c-0f8089955ff5)
+
+Pääsin kirjautumaan:
+
+![image](https://github.com/user-attachments/assets/b472cf95-80f2-4740-8c87-f2d65536948e)
+
+
+
 
 
 
