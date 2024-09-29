@@ -170,6 +170,92 @@ Tämäkään ei auttanut vaan sain edelleen 404 virheilmoituksen:
 
 Pidin välissä tauon. Sammutin virtuaalikoneen ja käynnistin uudelleen. 
 
+localhost näytti aiemmin tehdyn lakki.example virtualhostin sivun:
+
+![image](https://github.com/user-attachments/assets/d9fead90-db84-4060-961e-98efdca650ab)
+
+Aiemmin localhostista tuli oletussivu, jossa luki default, eli välissä tapahtui jotain, joka sai localhostin näyttämään lakki.example sivun. Kytkin lakki.example.com sivun pois päältä ja testasin uudestaan curl http://localhost/static/-komennolla ja nyt tuli oikea teksti:
+
+![image](https://github.com/user-attachments/assets/aa5796c8-2100-4030-944d-170ae68a4c63)
+
+Seuraavaksi loin uuden virtuaaliympäristön publicwsgi -hakemistoon komennolla virtualenv -p python3 --system-site-packages env:
+
+![image](https://github.com/user-attachments/assets/bfafec54-27f0-4fd8-bbc7-4daec2bd51da)
+
+Siirryin virtuaaliympäristöön koodilla source env/bin/activate ja tarkastin, että bin/pip/ hakemistot löytyivät env-kansion alta: 
+
+![image](https://github.com/user-attachments/assets/8d6238f0-c1c9-44b2-bead-07058b6f7c24)
+
+Seuraavaksi loin tiedoston asennettavia paketteja (django) varten komennolla micro requirements.txt:
+
+![image](https://github.com/user-attachments/assets/ec3dfadd-7837-4de3-9db7-0b423e6e8fb6)
+
+Suoritin asennuksen pip install -r requirements.txt :
+
+![image](https://github.com/user-attachments/assets/3350b680-ff8f-4c5c-a94a-097a7f03c856)
+
+Tarkastin version:
+
+![image](https://github.com/user-attachments/assets/9f127d33-5c9e-4322-8de0-ef2bac886b34)
+
+Käynnistin projektin django-admin startproject roosaproj. Tässä kohtaa sain ilmoituksen, että roosaproj on jo olemassa:
+
+![image](https://github.com/user-attachments/assets/dd4c4125-cccf-490e-90e0-caa02bd8b361)
+
+Tajusin, että olin käyttänyt samaa nimeä, kuin edellisessä harjoituksessa ja roosaproj alle ei tullut manage.py kansiota. Aloitin siis alusta. Poistuin vituaaliympäristostä deactivate komennolla. Loin hakemiston mkdir -p publicwsgi/rooproj/static/ ja sinne tekstiä index.html tiedostoon: 
+echo "Uusi yritys"|tee publicwsgi/rooproj/static/index.html. Lisäsin uuden virtualhostin: sudoedit /etc/apache2/sites-available/rooproj.conf
+
+![image](https://github.com/user-attachments/assets/be809951-5857-48ca-bdfb-623c72371346)
+
+![image](https://github.com/user-attachments/assets/942d183b-a8a9-48cb-b689-2fba3c56a533)
+
+Otin käyttöön rooproj sivun (sudo a2ensite rooproj.conf) ja poistin käytöstä roosaproj (sudo a2dissite roosaproj.conf) sivun. Tein konfigurointitestin ja käynnistin apachen uudelleen. Toimi:
+
+![image](https://github.com/user-attachments/assets/c68da915-c0ab-4cd0-856f-993f0cca6caf)
+
+Virtuaaliymäristö ja requirements.txt olivat jo ok ja siirryin virtuaaliympäristöön:
+
+![image](https://github.com/user-attachments/assets/a8c9ef5f-030a-4631-9dcd-35e75c4027cd)
+
+Tarkastin, että pip on oikeassa polussa:
+
+![image](https://github.com/user-attachments/assets/105cf1b0-d38e-41df-9579-781bcbee2d0d)
+
+Sain taas herjan, että rooproj on olemassa, vaikka olin vasta luonut sen:
+
+![image](https://github.com/user-attachments/assets/10d48676-0c31-41f8-891c-88f892f48770)
+
+Päätin kuitenkin seurata ohjeen loppuun ja katsoa miten käy. Lisäsin tietoja sudoedit /etc/apache2/sites-available/rooproj.conf:
+
+![image](https://github.com/user-attachments/assets/253346c9-def6-4316-93c8-1d8eb286dfbf)
+
+Asensin Apachen WSGI moduulin komennolla sudo apt-get -y install libapache2-mod-wsgi-py3
+
+![image](https://github.com/user-attachments/assets/b61f0c6b-f0df-4b6f-8d01-5d608230b3c4)
+
+Tarkastin konfiguraatiotestillä, että kaikki oli ok:
+
+![image](https://github.com/user-attachments/assets/1c580f2a-2e04-4625-aac7-81039c6f758a)
+
+Käynnistin Apachen uudelleen ja testasin curl -s komennolla toimiiko sivu ja onhan apache käytössä:
+
+![image](https://github.com/user-attachments/assets/067fdc2e-3f89-4323-9638-67261ab467ae)
+
+Apache oli käytössä, mutta sivu antaa virheviestin 403 Forbidden.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
