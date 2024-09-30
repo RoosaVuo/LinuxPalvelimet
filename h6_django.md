@@ -1,3 +1,16 @@
+
+Lähtötilanne: Virtuaalikone VirtualBoxin kautta
+
+RAM muisti 2GiB
+
+Virtuaalikoneella käytettävissä 64GB levy
+
+käyttöjärjestelmänä Debian Linux
+
+Host kone Windows 11 Home, jonka levy 474Gt
+
+prosessori AMD Ryzen 5 5500U with Radeon Graphics
+
 ## a) Tee yksinkertainen esimerkkiohjelma Djangolla.
 Ohjeet:
 Voit käyttää testipalvelinta, kunhan se ei näy Internetiin.
