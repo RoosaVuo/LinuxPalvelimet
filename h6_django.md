@@ -125,7 +125,7 @@ Lähde: Karvinen 2021: Deploy Django 4 - Production Install https://terokarvinen
 
 29.9. aloitus klo 17.35 lopetus 19.15 välissä tauko uusi aloitus 20.15 ja lopetus 22.17
 
-Testasin localhostin aloitussivun, olin muokannut sitä aiemmin niin, että näky teksti "Default":
+Testasin localhostin aloitussivun, olin muokannut sitä aiemmilla viikoilla niin, että näkyi teksti "Default":
 
 ![image](https://github.com/user-attachments/assets/1698d3d8-9910-4446-91dd-9cfc2edfeaa4)
 
@@ -153,7 +153,7 @@ Otin hattu.example.comin pois käytöstä, mutta se ei auttanut:
 
 ![image](https://github.com/user-attachments/assets/72951850-686f-4283-9fc2-c93fe196822b)
 
-Kysyin chatGptltä nuevoa ja koitin antaa read and execute -oikeudet, jotta apache voi operoida, mutta tämäkään ei auttanut: 
+Kysyin chatGptltä neuvoa ja koitin antaa read and execute -oikeudet, jotta apache voi operoida, mutta tämäkään ei auttanut: 
 
 ![image](https://github.com/user-attachments/assets/05e2d4bb-91f6-440a-a116-e2dd4c2635ae)
 
@@ -187,7 +187,7 @@ localhost näytti aiemmin tehdyn lakki.example virtualhostin sivun:
 
 ![image](https://github.com/user-attachments/assets/d9fead90-db84-4060-961e-98efdca650ab)
 
-Aiemmin localhostista tuli oletussivu, jossa luki default, eli välissä tapahtui jotain, joka sai localhostin näyttämään lakki.example sivun. Kytkin lakki.example.com sivun pois päältä ja testasin uudestaan curl http://localhost/static/-komennolla ja nyt tuli oikea teksti:
+Aiemmin localhostista tuli oletussivu, jossa luki default. Välissä tapahtui jotain, joka sai localhostin näyttämään lakki.example sivun. Kytkin lakki.example.com sivun pois päältä ja testasin uudestaan curl http://localhost/static/-komennolla ja nyt tuli oikea teksti:
 
 ![image](https://github.com/user-attachments/assets/aa5796c8-2100-4030-944d-170ae68a4c63)
 
@@ -284,11 +284,11 @@ Hain otsikon komennolla curl -s localhost|grep title ja siihen tuli esimerkin mu
 
 ![image](https://github.com/user-attachments/assets/dc1b6653-c37c-40eb-b9e9-d25cafc08ab1)
 
-Ja samoin selain antaoi Not Found -ilmoituksen tarkemman virheviestin sijaan:
+Ja samoin selain antoi halutun Not Found -ilmoituksen tarkemman virheviestin sijaan:
 
 ![image](https://github.com/user-attachments/assets/9c12d93d-b35b-4235-bc3a-1c658b9f0c24)
 
-Localhos/admin sivu toimi, mutta en ollut vielä luonut käyttäjää:
+Localhost/admin sivu toimi, mutta en ollut vielä luonut käyttäjää:
 
 ![image](https://github.com/user-attachments/assets/60fe0bf8-c078-4bf8-8ab9-3d8f9e4b8b5c)
 
