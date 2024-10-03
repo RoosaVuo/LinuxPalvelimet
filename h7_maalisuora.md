@@ -1,6 +1,6 @@
 ## a) Kirjoita ja aja "Hei maailma" kolmella kielellä.
 
-3.10. Aloitus klo 20.26
+3.10. Aloitus klo 20.26 lopetus 20.46
 Valisin kieliksi Pythonin, Bashin ja Rubyn. Lähteenä Teron https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/
 
 ### Python
@@ -40,6 +40,39 @@ Koitin toisen kerran ajaa koodin ja se toimi:
 
 
 ## b) Laita Linuxiin uusi komento niin, että kaikki käyttäjät voivat ajaa sitä.
+
+3.10. aloitus: 21.00 lopetus 21.34
+
+Tutkin ensin Teron ohjetta, jota käytin lähteenä: https://terokarvinen.com/2007/12/04/shell-scripting-4/
+
+Tein tiedoston lspwd ja lisäsin sinne komennot:
+
+![image](https://github.com/user-attachments/assets/94f24da7-72b5-4f11-9cc0-81a16197cbf4)
+
+Käytin komentoa chmod a+x lspwd, joka lisää kaikille käyttäjille (a) oikeuden suorittaa/käynnistää kyseisen tiedoston (x) Lähde man chmod:
+
+![image](https://github.com/user-attachments/assets/7f95db10-2418-4e57-a8ec-8cb01bd76eb2)
+
+Suoritin lspwd:n ja sain halutun näkymän, eli sen hetkisen hakemiston sisällön ja polun:
+
+![image](https://github.com/user-attachments/assets/4561e2e3-fc7f-44d5-b3dd-84c598c2e9ef)
+
+Seuraavaksi kopioin tiedoston polkuun /usr/local/bin/ komennolla sudo cp lspwd /usr/local/bin/. Testasin toimivuutta siirtymällä hakemistossa kaksi kertaa ylemmäs ja suorittamalla lspwd:n. Tulos oli oikein, eli toimi:
+
+![image](https://github.com/user-attachments/assets/01e5f63a-c4d3-434f-80d8-81111a84fee8)
+
+Loin uuden käyttäjän testaamista varten: 
+
+![image](https://github.com/user-attachments/assets/71c91c50-37d3-49f5-bc79-10f4110f7aae)
+
+Otin ssh yhteyden esteritesteri käyttäjään:
+
+![image](https://github.com/user-attachments/assets/e6697c90-5ebe-4d15-bf93-7abd714ae4bb)
+
+Ja testasin, että lspwd toimii ja se toimi = näytti kyseisen kansion sisällön ja polun:
+
+![image](https://github.com/user-attachments/assets/69e08c8f-41e2-4fb9-89b1-c90999bb443e)
+
 
 ## c) Ratkaise vanha arvioitava laboratorioharjoitus soveltuvin osin.
 
