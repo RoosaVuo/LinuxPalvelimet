@@ -220,7 +220,7 @@ Kirjautuminen tapahtuu salasanalla:
 
 Lopetus 16.39
 
-Tässä kohtaa huomasin, että raportti olisi tosiaan pitänyt tallentaa alussa luomaani tiedostoon. Kopioin tämän raportin, mutta kuvat eivät tietenkään näkyneet suoraan, joten testasin kuvan liittämistä vielä kansion tiedostoista.
+Tässä kohtaa huomasin, että raportti olisi tosiaan pitänyt tallentaa alussa luomaani tiedostoon. Kopioin tämän raportin, mutta kuvat eivät tietenkään näkyneet suoraan, joten testasin kuvan liittämistä vielä kansion tiedostoista. Tämä ei näyttänyt kuitenkaan ihan toimivan.
 
 ### h) Tuotantopropelli
 Jos olet tässä kohdassa, olet kyllä työskennellyt todella nopeasti (tai sitten teet tätä tehtävää huviksesi kurssin jälkeen). Mutta älä huoli, tässä haastetta, jotta et joudu pyörittelemään peukaloita.
