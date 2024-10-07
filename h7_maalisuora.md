@@ -82,6 +82,8 @@ https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-linux-palveli
 Alkutiedot: asensin uuden virtuaalikoneen, päivitin sen ohjelmat ja asensin palomuurin. 
 Aloitus 7.10. klo 8.53
 
+[HUOM! olen kirjoittanut melkein koko labraharjoituksesta raporttia, joten tämä osio on aika pitkä]
+
 Asensin micron sudo apt-get -y install micro. Loin kotihakemistoon kansion mkdir report ja tiedoston micro index.md
 Harjoituksessa sanottiin, että ei tarvitse raportoida joka kohtaa, mutta tein ainakin jonkinlaisen raportin itseäni varten.
 
@@ -254,7 +256,6 @@ Define TDIR /home/roosa/publicwsgi/tuotproj
 Define TWSGI /home/roosa/publicwsgi/tuotproj/tuotproj/wsgi.py
 Define TUSER roosa
 Define TVENV /home/roosa/publicwsgi/env/lib/python3.11/site-packages
-# See https://terokarvinen.com/2022/deploy-django/
 
 <VirtualHost *:80>
         Alias /static/ ${TDIR}/static/
