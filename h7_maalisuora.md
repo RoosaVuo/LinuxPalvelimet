@@ -145,7 +145,7 @@ Kopioin sen toiselle käyttäjälle: ssh-copy-id roosate@localhost
 
 ![image](https://github.com/user-attachments/assets/6b152ccb-4d10-477c-8002-7c15bf91e421)
 
-Automaattinen kirjatuuminen toimi: 
+Automaattinen kirjatuminen toimi: 
 
 ![image](https://github.com/user-attachments/assets/4d8d543d-5819-439a-afb8-60e0696fa031)
 
