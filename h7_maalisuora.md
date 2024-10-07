@@ -218,6 +218,9 @@ Kirjautuminen tapahtuu salasanalla:
 
 ![image](https://github.com/user-attachments/assets/84a5e849-1eec-4611-adf0-9f57e8f14a21)
 
+Lopetus 16.39
+
+Tässä kohtaa huomasin, että raportti olisi tosiaan pitänyt tallentaa alussa luomaani tiedostoon. Kopioin tämän raportin, mutta kuvat eivät tietenkään näkyneet suoraan, joten testasin kuvan liittämistä vielä kansion tiedostoista.
 
 ### h) Tuotantopropelli
 Jos olet tässä kohdassa, olet kyllä työskennellyt todella nopeasti (tai sitten teet tätä tehtävää huviksesi kurssin jälkeen). Mutta älä huoli, tässä haastetta, jotta et joudu pyörittelemään peukaloita.
