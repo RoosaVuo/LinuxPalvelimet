@@ -184,9 +184,7 @@ Ja muokkasin oikeuksia:
 ![image](https://github.com/user-attachments/assets/93d5089f-e70a-4619-b745-8b0a614f7b91)
 
 
-Lopetus 10.51 tästä eteenpäin jäi kesken.
-
-Jatkoin 16.08
+Lopetus 10.51 jatkoin 16.08
 
 Käynnistin kehitysympäristön ja projectin:
 
