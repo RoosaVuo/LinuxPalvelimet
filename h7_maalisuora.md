@@ -122,13 +122,27 @@ Lisäsin hosts tiedostoon ip-osoitteen + aikakone.example.com
 
 ![image](https://github.com/user-attachments/assets/1be13117-9696-46a4-abb8-299f63444591)
 
+ip-osoitteella tuli vielä oletussivu, joten otin sen pois käytöstä komennolla: sudo a2dissite 000-default.conf. Nyt myös IP-osoitteella tulee AI Kakone -sivu:
 
+![image](https://github.com/user-attachments/assets/f9677304-c459-4801-9e3e-8a425e44585b)
 
+![image](https://github.com/user-attachments/assets/c529cb1c-1682-4082-88f7-f4668c5556a2)
+
+![image](https://github.com/user-attachments/assets/27682bde-97c5-457e-b169-a367424ce1fb)
 
 ### g) Salattua hallintaa
-Asenna ssh-palvelin
-Tee uusi käyttäjä omalla nimelläsi, esim. minä tekisin "Tero Karvinen test", login name: "terote01"
+Asensin ssh:n sudo apt-get -y install ssh
+
+Tein uuden käyttäjän:  roosate. Komenot sudo adduser roosate
+
+![image](https://github.com/user-attachments/assets/91ac9570-c6c4-4531-ac90-1d6e3479790a)
+
+
 Automatisoi ssh-kirjautuminen julkisen avaimen menetelmällä, niin että et tarvitse salasanoja, kun kirjaudut sisään. Voit käyttää kirjautumiseen localhost-osoitetta
+
+
+
+
 ### h) Djangon lahjat
 Asenna omalle käyttäjällesi Django-kehitysympäristö
 Tee tietokantaan lista tekoälyistämme, jossa on nämä ominaisuudet
