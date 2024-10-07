@@ -223,7 +223,78 @@ Lopetus 16.39
 Tässä kohtaa huomasin, että raportti olisi tosiaan pitänyt tallentaa alussa luomaani tiedostoon. Kopioin tämän raportin, mutta kuvat eivät tietenkään näkyneet suoraan, joten testasin kuvan liittämistä vielä kansion tiedostoista. Tämä ei näyttänyt kuitenkaan ihan toimivan.
 
 ### h) Tuotantopropelli
-Jos olet tässä kohdassa, olet kyllä työskennellyt todella nopeasti (tai sitten teet tätä tehtävää huviksesi kurssin jälkeen). Mutta älä huoli, tässä haastetta, jotta et joudu pyörittelemään peukaloita.
+
+Aloitus 20.42 
+
+tämä osio tuli kevyemmällä raportilla, ennemmin muistiinpano/ohje tyyliin
+
+mkdir -p publicwsgi/tuotantoproj/static/ 
+-> echo "Statically see you at tuotantoproj"|tee publicwsgi/tuotantoproj/static/index.html
+-> sudoedit /etc/apache2/sites-available/tuotantoproj.conf
+->
+<VirtualHost *:80>
+	Alias /static/ /home/roosa/publicwsgi/tuotantoproj/static/
+	<Directory /home/roosa/publicwsgi/tuotantoproj/static/>
+		Require all granted
+	</Directory>
+</VirtualHost>
+
+-> sudo a2ensite tuotantoproj.conf
+-> sudo a2dissite 000-default.conf ja sudo a2dissite aikakone.example.com.conf
+-> /sbin/apache2ctl configtest
+-> sudo systemctl restart apache2
+-> curl http://localhost/static/
+-> siirtyminen publicwsgi  kansioon
+-> virtualenv -p python3 --system-site-packages env -> source env/bin/activate -> which pip (tarkasta, että on oikea polku) -> micro requirements.txt (lisää "django") -> pip install -r requirements.txt
+
+-> django-admin startproject tuotproj
+-> sudoedit /etc/apache2/sites-available/tuotantoproj.conf
+
+Define TDIR /home/roosa/publicwsgi/tuotproj
+Define TWSGI /home/roosa/publicwsgi/tuotproj/tuotproj/wsgi.py
+Define TUSER roosa
+Define TVENV /home/roosa/publicwsgi/env/lib/python3.11/site-packages
+# See https://terokarvinen.com/2022/deploy-django/
+
+<VirtualHost *:80>
+        Alias /static/ ${TDIR}/static/
+        <Directory ${TDIR}/static/>
+                Require all granted
+        </Directory>
+
+        WSGIDaemonProcess ${TUSER} user=${TUSER} group=${TUSER} threads=5 python-path="${TDIR}:${TVENV}"
+        WSGIScriptAlias / ${TWSGI}
+        <Directory ${TDIR}>
+             WSGIProcessGroup ${TUSER}
+             WSGIApplicationGroup %{GLOBAL}
+             WSGIScriptReloading On
+             <Files wsgi.py>
+                Require all granted
+             </Files>
+        </Directory>
+
+</VirtualHost>
+
+Undefine TDIR
+Undefine TWSGI
+Undefine TUSER
+Undefine TVENV
+
+
+-> sudo apt-get -y install libapache2-mod-wsgi-py3
+-> /sbin/apache2ctl configtest
+-> sudo systemctl restart apache2
+-> curl -s localhost|grep title
+
+Toimii 
+
+![image](https://github.com/user-attachments/assets/f2d52b10-8e25-4b46-a191-b86f4020f83e)
+
+![image](https://github.com/user-attachments/assets/b352c8f5-6261-4c24-b131-a2498660d062)
+
+-> kansion vaihto cd tuotproj/
+-> micro tuotproj/settings.py -> DEBUG = False -> ALLOWED_HOSTS = ["localhost"]
+
 Tee tuotantotyyppinen asennus Djangosta
 Laita Django-lahjatietokanta tuotantotyyppiseen asennukseen
 Voit vaihtaa tämän sivun näkymään etusivulla staattisen sivun sijasta
