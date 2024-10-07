@@ -149,13 +149,48 @@ Automaattinen kirjatuuminen toimi:
 
 
 ### h) Djangon lahjat
-Asenna omalle käyttäjällesi Django-kehitysympäristö
+
+loin /home/roosa hakemistoon project-kansion django projektia varten:
+
+![image](https://github.com/user-attachments/assets/9a68649d-3138-424a-b82a-d458f14a3411)
+
+Asensin kehitysympäristön komennolla sudo apt-get -y install virtualenv ja otin sen käyttöön:
+
+![image](https://github.com/user-attachments/assets/e243348c-730f-4c09-83ef-62c1d739ab68)
+
+Lisäsin tiedostoon tekstin "django"
+
+![image](https://github.com/user-attachments/assets/c8d614ff-b2ad-41b3-a3f5-ee641c2c9ff1)
+
+Jonka jälkeen asensin sen komennolla: pip install -r requirements.txt
+
+Projektin aloitus: django-admin startproject roproj -> cd roproj -> ./manage.py runserver
+Kopioin osoitteen http://127.0.0.1:8000/ ja se näytti toimivan oikein:
+
+![image](https://github.com/user-attachments/assets/00171de2-e9df-4cc3-89ca-ea2caf0de1d4)
+
+Seuraavaksi syötin komennot ./manage.py makemigrations ja ./manage.py migrate
+
+Lisäsin käyttäjän ./manage.py createsuperuser
+
+Pääsin sisään superuserina ja loin Erkille oman käyttäjän:
+
+![image](https://github.com/user-attachments/assets/5ad7d010-68e8-46c1-a165-e6596504fe21)
+
+Ja muokkasin oikeuksia:
+
+![image](https://github.com/user-attachments/assets/93d5089f-e70a-4619-b745-8b0a614f7b91)
+
+
+Lopetus 10.51 tästä eteenpäin jäi kesken
+
 Tee tietokantaan lista tekoälyistämme, jossa on nämä ominaisuudet
 Kirjautuminen salasanalla
 Tietokannan muokkaus wepissä Djangon omalla ylläpitoliittymällä (Django admin)
-Käyttäjä Erkille, jossa ei ole ylläpito-oikeuksia
 Taulu Assistants, jossa jokaisella tietueella on nimi (name)
 Jos haluat, voit lisäksi bonuksena laittaa mukaan kentän koko (size)
+
+
 ### h) Tuotantopropelli
 Jos olet tässä kohdassa, olet kyllä työskennellyt todella nopeasti (tai sitten teet tätä tehtävää huviksesi kurssin jälkeen). Mutta älä huoli, tässä haastetta, jotta et joudu pyörittelemään peukaloita.
 Tee tuotantotyyppinen asennus Djangosta
