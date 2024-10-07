@@ -294,11 +294,24 @@ Toimii
 
 -> kansion vaihto cd tuotproj/
 -> micro tuotproj/settings.py -> DEBUG = False -> ALLOWED_HOSTS = ["localhost"]
+-> touch tuotproj/wsgi.py
+-> sudo systemctl restart apache2
+-> curl -s localhost|grep title = not found on oikein.
+-> TYYLI micro tuotproj/settings.py -> import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+-> ./manage.py collectstatic
 
-Tee tuotantotyyppinen asennus Djangosta
-Laita Django-lahjatietokanta tuotantotyyppiseen asennukseen
-Voit vaihtaa tämän sivun näkymään etusivulla staattisen sivun sijasta
+tyylit toimivat:
 
+![image](https://github.com/user-attachments/assets/9db5dbf9-5994-41b2-ae1f-5f656b9702a8)
+
+-> ./manage.py createsuperuser
+
+kirjautuminen onnistui:
+
+![image](https://github.com/user-attachments/assets/ffdf6bc8-0686-4b99-a09e-89e49e0789d7)
+
+Koitin lisätä lahjatietokannan, mutta se ei jostain syystä onnistunut. Olisi siis kannattanut sittenkin tehdä kunnon raportti, niin olisi helpompi päästä virheen jäljille, mutta valitettavasti aika loppui kesken. 
 
 
 ## d) Asenna itsellesi tyhjä virtuaalikone arvioitavaa labraa varten. Suosittelen Debian 12-Bookworm amd64, riittävästi RAM ja kovalevyä. Koneella saa olla päivitetyt ohjelmistot (apt-get dist-upgrade) ja tulimuuri. Koneella ei saa olla mitään muita demoneja tai ohjelmia asennettuna kuin nuo ja asennuksen mukana tulevat. Virtuaalikoneella ei saa olla luottamuksellisia tiedostoja, koska opettaja saattaa tarkastella sitä. [Update 2024-10-03 w40 Thu: Tästä d-osioista ei tarvitse kirjoittaa raporttia. Koneelle voi asentaa haluamansa graafisen käyttöliittymän oletusasetuksilla, suosittelen xfce-työpöytää.]
