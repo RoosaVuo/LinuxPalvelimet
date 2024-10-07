@@ -314,5 +314,6 @@ kirjautuminen onnistui:
 
 Koitin lisätä lahjatietokannan, mutta se ei jostain syystä onnistunut. Olisi siis kannattanut sittenkin tehdä kunnon raportti, niin olisi helpompi päästä virheen jäljille, mutta valitettavasti aika loppui kesken. 
 
+Lopun paketti tiedostoista - tämä osio jäi epäselväksi
 
 ## d) Asenna itsellesi tyhjä virtuaalikone arvioitavaa labraa varten. Suosittelen Debian 12-Bookworm amd64, riittävästi RAM ja kovalevyä. Koneella saa olla päivitetyt ohjelmistot (apt-get dist-upgrade) ja tulimuuri. Koneella ei saa olla mitään muita demoneja tai ohjelmia asennettuna kuin nuo ja asennuksen mukana tulevat. Virtuaalikoneella ei saa olla luottamuksellisia tiedostoja, koska opettaja saattaa tarkastella sitä. [Update 2024-10-03 w40 Thu: Tästä d-osioista ei tarvitse kirjoittaa raporttia. Koneelle voi asentaa haluamansa graafisen käyttöliittymän oletusasetuksilla, suosittelen xfce-työpöytää.]
