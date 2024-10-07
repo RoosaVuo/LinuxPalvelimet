@@ -131,16 +131,21 @@ ip-osoitteella tuli vielä oletussivu, joten otin sen pois käytöstä komennoll
 ![image](https://github.com/user-attachments/assets/27682bde-97c5-457e-b169-a367424ce1fb)
 
 ### g) Salattua hallintaa
-Asensin ssh:n sudo apt-get -y install ssh
-
-Tein uuden käyttäjän:  roosate. Komenot sudo adduser roosate
+Asensin ssh:n sudo apt-get -y install ssh ja Tein uuden käyttäjän:  roosate. Komenot sudo adduser roosate
 
 ![image](https://github.com/user-attachments/assets/91ac9570-c6c4-4531-ac90-1d6e3479790a)
 
+Loin avaimen komennolla: ssh-keygen -t rsa -b 4096
 
-Automatisoi ssh-kirjautuminen julkisen avaimen menetelmällä, niin että et tarvitse salasanoja, kun kirjaudut sisään. Voit käyttää kirjautumiseen localhost-osoitetta
+![image](https://github.com/user-attachments/assets/596737e7-ec78-408c-af7c-4d3c7893f4a1)
 
+Kopioin sen toiselle käyttäjälle: ssh-copy-id roosate@localhost
 
+![image](https://github.com/user-attachments/assets/6b152ccb-4d10-477c-8002-7c15bf91e421)
+
+Automaattinen kirjatuuminen toimi: 
+
+![image](https://github.com/user-attachments/assets/4d8d543d-5819-439a-afb8-60e0696fa031)
 
 
 ### h) Djangon lahjat
