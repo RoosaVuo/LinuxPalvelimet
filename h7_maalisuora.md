@@ -182,13 +182,41 @@ Ja muokkasin oikeuksia:
 ![image](https://github.com/user-attachments/assets/93d5089f-e70a-4619-b745-8b0a614f7b91)
 
 
-Lopetus 10.51 tästä eteenpäin jäi kesken
+Lopetus 10.51 tästä eteenpäin jäi kesken.
 
-Tee tietokantaan lista tekoälyistämme, jossa on nämä ominaisuudet
-Kirjautuminen salasanalla
-Tietokannan muokkaus wepissä Djangon omalla ylläpitoliittymällä (Django admin)
-Taulu Assistants, jossa jokaisella tietueella on nimi (name)
-Jos haluat, voit lisäksi bonuksena laittaa mukaan kentän koko (size)
+Jatkoin 16.08
+
+Käynnistin kehitysympäristön ja projectin:
+
+![image](https://github.com/user-attachments/assets/c34b4fde-09bc-4f6c-a197-b5844b70809b)
+
+Loin uuden kansion assistantti-taululle: ./manage.py startapp assistants ja lisäsin sen installed_apps-kohtaan micro roproj/settings.py:
+
+![image](https://github.com/user-attachments/assets/731043ab-2cab-4217-9c90-e8095d6e9c36)
+
+Taulun luominen: micro assistants/models.py
+
+![image](https://github.com/user-attachments/assets/1064b223-f827-4501-abab-5ebdceee6b6f)
+
+Tein migraation ja lisäsin admin näkymään ./manage.py makemigrations, ./manage.py migrate ja micro assistants/admin.py
+
+![image](https://github.com/user-attachments/assets/e23b8815-03fb-449b-916d-d9882910dd70)
+
+Taulun luominen onnistui: 
+
+![image](https://github.com/user-attachments/assets/d172580f-5fc3-4f7f-95ad-8d86036a2e03)
+
+Muokkaaminen onnistui. Lisäsin assarit 1-5 ja poistin assari3n:
+
+![image](https://github.com/user-attachments/assets/92088a20-1cc5-4475-a5ae-60ba790adffd)
+
+Lisäsin Erkille oikeuden katsoa Assistants-taulua
+
+![image](https://github.com/user-attachments/assets/13929786-4bf1-4c89-b762-21c9b065eb97)
+
+Kirjautuminen tapahtuu salasanalla:
+
+![image](https://github.com/user-attachments/assets/84a5e849-1eec-4611-adf0-9f57e8f14a21)
 
 
 ### h) Tuotantopropelli
