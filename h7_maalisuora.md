@@ -226,7 +226,7 @@ Tässä kohtaa huomasin, että raportti olisi tosiaan pitänyt tallentaa alussa 
 
 Aloitus 20.42 
 
-tämä osio tuli kevyemmällä raportilla, ennemmin muistiinpano/ohje tyyliin
+tämän osion raportti tuli enemmänkin muistiinpanotyyliin. 
 
 mkdir -p publicwsgi/tuotantoproj/static/ 
 -> echo "Statically see you at tuotantoproj"|tee publicwsgi/tuotantoproj/static/index.html
